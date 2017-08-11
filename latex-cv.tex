@@ -1,0 +1,888 @@
+% !TEX TS-program = xelatex
+
+\documentclass[11pt]{article}
+
+\usepackage{amssymb, tabularx}
+
+\usepackage[hyphens]{url}
+\urlstyle{same}
+
+%\usepackage[T1]{fontenc}
+%\usepackage[scaled]{helvet}
+%\renewcommand*{\familydefault}{\sfdefault}
+\usepackage{fontspec}
+\usepackage{xunicode} %Unicode extras!
+\usepackage{xltxtra}  %Fixes
+
+\setmainfont{Helvetica Neue Light}
+%\setmainfont{Gill Sans Light}
+
+\newenvironment{mytab}{\renewcommand{\arraystretch}{1.3}}
+
+\usepackage{longtable}
+
+\usepackage[margin=2cm]{geometry}
+
+\parindent 0pt
+
+%\newcommand\totalpages{9}
+
+\usepackage[small,compact]{titlesec}
+\titleformat{\section} {\vspace{12pt}\bf\large}{$\blacktriangleright$}{3pt} {\vspace{0pt}}
+\titleformat{\subsection} {\vspace{4pt}}{\thesubsection} {11pt} {}[\titlerule]
+\titleformat{\subsubsection} {\vspace{2pt}\it}{\thesubsubsection} {11pt} {\vspace{-4pt}}
+
+
+
+% for modifying the thickness of underlines
+\usepackage[normalem]{ulem}
+\renewcommand\ULthickness{1pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{Curriculum vitae}
+\chead{}
+\rhead{POON, Art F.~Y.}
+\lfoot{\scriptsize Last updated \today}
+\cfoot{}
+\rfoot{\thepage}
+
+
+\begin{document}
+
+
+\thispagestyle{empty}
+
+{\Huge Art F Y Poon}
+
+\section {Contact Information}
+\vspace{.05in}
+\begin{tabular}{@{}p{4in}p{4in}}
+Western University  & {\it Phone:}  (519) 661-2111 x87978\\ 
+Health Sciences Addition, H422   &  \\ 
+London, ON\hspace{1ex}N6A 5C1\hspace{1em}CANADA & {\it E-mail:}  apoon42@uwo.ca\\       
+\end{tabular}
+
+\section{Citizenship} Canadian.
+
+
+\section{Research Interests}
+Virus evolution.  
+Bioinformatics.
+Phylogenetics.
+Human RNA viruses.
+Machine learning.
+%HIV and hepatitis C virus.  
+Experimental evolution.  
+Evolutionary genetics.  
+Molecular epidemiology. 
+Mathematical biology.  
+Population genetics.
+%infectious diseases, population genetics, experimental evolution, virology, mathematical biology, social networks.
+
+
+\section{Research Appointments}
+
+\begin{tabular}{@{}p{2in}p{3.2in}p{1.1in}}
+Appointment & Institution & Dates\\
+\hline
+{Assistant Professor} & Western University \newline Faculty of Medicine, Department of Pathology \& \newline Laboratory Medicine & August 2016 - \newline current \\[6pt]
+{Assistant Professor\newline (non-tenure track)} & University of British Columbia\newline Faculty of Medicine, Department of Medicine & March 2012 - \newline July 2016\\[6pt]
+{Senior Research Scientist} & BC Centre for Excellence in HIV/AIDS & October 2015 - \newline July 2016\\[6pt]
+{Associate Research\newline Scientist, Bioinformatics} &  BC Centre for Excellence in HIV/AIDS & {October 2009 - \newline October 2015}\\[6pt]
+{Adjunct Assistant Professor} & Simon Fraser University\newline Faculty of Health Sciences & July 2010-\newline June 2015\\
+\hline
+\end{tabular}
+
+
+\section{Training}
+
+\begin{mytab}
+\begin{longtable}{@{}p{1in}p{4in}r}
+Degree & Institution & Completion date\\
+\hline
+Postdoctoral & {\bf University of British Columbia}\newline Canadian Institutes of Health Research Fellowship (P.~Richard Harrigan) & Aug 2010\\
+Postdoctoral & {\bf University of California, San Diego}\newline HIV phylogenetics and bioinformatics; Center for AIDS Research (Simon D.~W.~Frost) & July 2008\\
+Ph.~D. & {\bf University of California, San Diego}\newline Evolutionary consequences of the genetic environment on mutations in bacterial viruses (Lin Chao). & June 10, 2005\\
+M.~Sc. & {\bf University of British Columbia}\newline The evolution of the genetic load caused by recurrent mutations in small populations: genetic context and demographic history (Sarah P.~Otto) & July 4, 2000\\
+Hon.~B.~Sc. & {\bf University of Toronto}\newline Estimates of mutational variance in \textit{Drosophila melanogaster} (David Houle)  &  June 1998\\
+\hline
+\end{longtable}
+\end{mytab}
+
+
+
+
+
+
+
+\section {Awards and Recognitions}
+
+\begin{mytab}
+\begin{tabular}{@{}p{4.4in}p{0.8in}r}
+Award & Dates & Amount\\
+\hline
+{\bf CIHR New Investigator Award}\newline CIHR Priority Announcement: CHVI Vaccine Discovery and Social Research & 2013-2018 & CAD\$ 300,000\\
+{\bf Career Investigator Scholar Award}\newline Michael Smith Foundation for Health Research (MSFHR)/St.~Paul's Hospital Foundation-Providence Health Care Research Institute (SPHF-PHCRI)  & 2012-2020 & CAD\$ 317,500\\
+{\bf CIHR Fellowship} \newline CIHR Fellowships Award in the Area of Biomedical/Clinical HIV/AIDS Research & 2008-2010 & CAD\$ 97,500\\
+{\bf Young Investigator Award}\newline 13th Conference on Retroviruses and Opportunistic Infections & 2006 & USD\$ 982\\
+{\bf Postgraduate Scholarship Award}\newline Natural Sciences and Engineering Research Council of Canada (NSERC) & 1998-2000 & CAD\$ 37,000\\
+\hline
+\end{tabular}
+\end{mytab}
+
+
+\section{Grants}
+\vspace{-1em}
+\begin{mytab}
+\begin{longtable}{@{}p{3.in}p{1.4in}p{0.5in}r}
+Funding & Role & Dates & Amount\\
+\hline
+
+{\it Active funding}\\
+
+{\bf CIHR Project Grant (bridge)}\newline Phylodynamics of HIV within hosts. & Principal investigator & 2017/4-2018/3 & CAD\$100,000\\
+
+{\bf Genome Canada Grant: 2015 Bioinformatics and Computational Biology}\newline Kamphir: a versatile framework to fit models to phylogenetic tree shapes. 
+& Principal investigator & 2016/10-2018/9 & CAD\$205,365\\
+
+{\bf Gates Foundation Grant}\newline Biostatistical, Computational Biology, and Mathematical Modeling for the Assessment of Immune Correlates of Protection in the HVTN 701 and 702 Efficacy Trials of South Africa. & Subgrantee (PI: Peter B.~Gilbert) & 2014/7-2017/6 & US\$1,051,333\\
+
+{\bf CIHR Team Grant: HIV Cure Research}\newline The Canadian HIV Cure Research Enterprise (CanCURE)  & Co-investigator (PI: Eric Cohen) & 2014-2018 & CAD\$8,760,000\\
+
+{\bf Grant - Genome Canada-CIHR Partnership in Genomics and Personalized Health}\newline Viral and human genetic predictors of response to HIV therapies.  & Co-investigator (PI: P.~Richard Harrigan, J.~Montaner) & 2013/4-2017/3 & CAD\$ 2,437,000\\
+
+{\bf Operating grant - NIH}\newline Seek and Treat for Optimal Prevention of HIV \& AIDS in BC (R01DA036307-01) & Co-investigator\newline (PI: J.~Montaner) & 2013/6-2018/2 & US\$ 530,311\\
+
+{\bf Operating grant - NIH}\newline Impacts of universal access to HIV/AIDS care among HIV+ injection drug users (DA021525-06). & Co-investigator\newline (PI: E.~Wood) & 2012/9-2017/8 & CAD\$ 2,424,355\\
+
+
+%{\bf Operating grant - CIHR}\newline Reconstructing within-host evolution of HIV-1 from next-generation sequencing data.  &  Principal Investigator  & 2011/4-2014/3  & CAD\$ 169,441\\
+
+
+\hline
+\textit{Completed funding}\\
+
+{\bf CHVI Team Grant: HIV/AIDS Vaccine Discovery and Social Research}\newline Barriers to engaging young people in HIV vaccine trials in a priority setting. & Collaborator\newline (PI: M.~Brockman) & 2011/12-2016/11 & CAD\$ 1,215,396\\
+
+{\bf Operating grant - CIHR}\newline Measuring mitochondrial aging, application to HIV infection and therapy & Co-investigator\newline (PI: H.~C\^ot\'e) & 2012/10-2015/9 & CAD\$ 330,150\\
+
+{\bf CHVI Team Grant: HIV/AIDS Vaccine Discovery and Social Research}\newline The Botswana-Canada AIDS Vaccine Discovery Partnership. & Collaborator\newline (PI: R.~Musonda, M.~Wainberg)  & 2011/12-2014/11 & CAD\$ 2,466,292\\
+
+{\bf Operating grant - CIHR}\newline HIV adaptation to immune selection pressures: historic trends and future implications. & Co-investigator\newline (PI: Z.~Brumme) & 2011/10-2014/9 & CAD\$ 318,132\\
+
+{\bf Operating grant - CIHR}\newline Hepatitis C virus transmission dynamics among injection drug users.  &  Co-investigator\newline (PI: M.~Krajden)  &  2011/10-2014/9  & CAD\$ 336,659\\
+
+{\bf Continued Development and Maintenance of Software (R01) - NIH} \newline HyPhy: Molecular Evolutionary Analyses.  &  Consultant\newline (PI: S.~Muse) & 2010/9-2014/8 & USD\$ 1,129,344\\
+
+{\bf Operating grant - CIHR}\newline Reconstructing within-host evolution of HIV-1 from next-generation sequencing data (HOP 111406). & Principal investigator & 2011/4-2014/3 & CAD\$ 169,441\\
+
+{\bf Administrative Supplement - NIH}\newline Evaluating the natural history of injection drug use (3R01DA011591-12S1). & Co-investigator\newline (PI: T.~Kerr) & 2012/3-2013/2 & USD\$ 81,687\\
+
+{\bf Operating grant, Industry-partnered Collaborative Research - CIHR}\newline Improved Screening Methods for CCR5-Antagonists Use by Ultra Deep Sequencing and Quantitative Population-Based Sequencing Techniques: Analyses of the Phase III Human Clinical Trials of Maraviroc.  & Principal Investigator\newline (Co-PI: P.~R.~Harrigan)  &  2009/4-2012/3  &  CAD\$ 690,659\\
+
+{\bf Meetings, Planning and Dissemination Grant: Genetics - CIHR}\newline Applied Phylogenetics for the Health Sciences: Vancouver Workshop  &  Co-investigator\newline (PI: Z.~Brumme)  &  2011/1-2011/2  & CAD\$ 2,750\\
+
+{\bf National Institute of Allergy and Infectious Diseases, R21 - NIH}\newline Assessing the Clinical Consequences of HIV Drug Resistance  &  Co-investigator\newline (PI: R.~Haubrich)  &  2008/12-2010/12  & CAD\$ 424,875\\
+
+{\bf Fellowships Award (HIV/AIDS Priority Announcement) - CIHR}\newline High-dimensional data analysis using probabilistic graphical models to infer the causal associations between clinical outcome and virus sequence evolution, drug resistance, and host genetic factors in the context of HIV-1-infected patients  &  Co-applicant\newline(PI: P.~R.~Harrigan)  &  2008/7-2010/7  &  CAD\$ 97,500\\
+
+{\bf Emerging Team Grant: HIV/AIDS Vaccine Discovery \& Social Research (Letter of Intent) - CIHR}\newline Prophylactic HIV vaccines for social networks of injection drug users. & Co-applicant\newline (PI: J.~Scott) & 2009/12-2010/3  & CAD\$ 10,000\\
+
+\hline\hline
+\end{longtable}
+\end{mytab}
+
+
+\section{Publications}
+
+\textbf{71} peer-reviewed publications, \textbf{33} as first or senior author (underline and bold).
+
+\begin{enumerate}
+
+%\addtolength{\itemsep}{0.5\baselineskip}
+
+\item H Gatanaga, ZL Brumme, E Adland, T Chikata, T Hayashida, G Van Tran, GQ Lee, K Van Nguyen, JN Martin, D Bangsberg, MN Carrington, M John, S Mallal, \uline{AFY Poon}, P Goulder, M Takiguchi, and S Oka.  \textbf{2017.}
+Potential for immune-driven viral polymorphisms to compromise antiretroviral-based pre-exposure prophylaxis for prevention of HIV-1 infection.  
+\textit{AIDS}, accepted.
+
+\item O Ratmann, EB Hodcroft, M Pickles, A Cori, M Hall, S Lycett, C Colijn, B Dearlove, X Didelot, S Frost, M Hossain, JB Joy, M Kendall, D K\"uhnert, GE Leventhal, R Liang, G Plazzotta, \uline{A Poon}, DA Rasmussen, T Stadler, E Volz, C Weis, AJ Leigh Brown and C Fraser on behalf of the PANGEA-HIV consortium.  \textbf{2017.}  Phylogenetic Tools for Generalised HIV Epidemics: Findings from the PANGEA-HIV Methods Comparison.  \textit{Mol Biol Evol} 34(1): 185-203.
+
+\item A Gonzalez-Serna, A Glas, CJ Brumme, \uline{AF Poon}, A Nohpal De La Rosa, T Mudrikova, VD Lima, AMJ Wensing, and PR Harrigan.  \textbf{2017.}  Genotypic susceptibility score (GSS) and CD4+ T-cell recovery in HIV-1 patients with suppressed viral load.  \textit{J Antimicrob Chemother} 72(2): 496-503.
+
+\item BR Jones and \uline{\textbf{AFY Poon}}.  \textbf{2017.}  node.dating: dating ancestors in phylogenetic trees in R.  \textit{Bioinformatics} 33.6: 932-934.
+
+\item CJ Brumme and \uline{\textbf{AFY Poon}}.  \textbf{2016.}  Promises and pitfalls of Illumina sequencing for HIV resistance genotyping.  \textit{Virus Res}, published online: \url{http://dx.doi.org/10.1016/j.virusres.2016.12.008}.
+
+
+\item \uline{\textbf{AFY Poon}}.  \textbf{2016.}  Impacts and shortcomings of genetic clustering for infectious disease outbreaks.  \textit{Virus Evol} 2(2): vew031.
+
+\item RM McCloskey, RH Liang, and \uline{\textbf{AFY Poon}}.  \textbf{2016.} Reconstructing contact network parameters from viral phylogenies.  \textit{Virus Evol} 2(2): vew029.
+
+\item V Montoya, A Olmstead, P Tang, D Cook, N Janjua, J Grebely, B Jacka, \uline{AFY Poon}, and M Krajden.  \textbf{2016.}  Deep sequencing increases hepatitis C virus phylogenetic cluster detection compared to Sanger sequencing.  \textit{Infect Genet Evol} 43: 329-337.
+
+\item \textbf{\uline{AFY Poon}}, R Gustafson, P Daly, L Zerr, SE Demlow, J Wong, CK Woods, RS Hogg, M Krajden, D Moore, P Kendall, JSG Montaner, and PR Harrigan.  \textbf{2016.}  Near real-time monitoring of HIV transmission hotspots from routine HIV genotyping: an implementation case study.  \textit{Lancet HIV} 3(5): e231-e238.\\
+$\bigstar$  Commentary.  Translating phylogeny into action for HIV surveillance.  Gardy, J.  \textit{Lancet HIV} 3(5): e196-e197.\\
+$\bigstar$  IEEE Spectrum magazine.\\
+\url{http://spectrum.ieee.org/the-human-os/biomedical/diagnostics/big-data-tamps-down-hiv-outbreaks}.\\
+$\bigstar$  Featured in \textit{UNAIDS Science now}, 5$^{\textrm{th}}$ issue (May 2016).\\  \url{https://sciencenow.unaids.org/post/hiv-testing-and-treatment-11}
+
+\item JB Joy, RM McCloskey, T Nguyen, RH Liang, Y Khudyakov, A Olmstead, M Krajden, J Ward, PR Harrigan, JSG Montaner, and \textbf{\uline{AFY Poon}}.  \textbf{2016.}  The spread of hepatitis C virus genotype 1a in North America: a retrospective phylogenetic study.   \textit{Lancet Inf Dis} 16(6): 698-702.\\
+$\bigstar$  Commentary.  Apportioning blame in the North American hepatitis C virus epidemic.  Spaulding, AC and LS Miller.  \textit{Lancet Inf Dis} 16(6): 626-627.\\
+$\bigstar$ Globe and Mail (March 31, 2016). \url{http://www.theglobeandmail.com/news/british-columbia/hepatitis-c-peaked-15-years-earlier-than-believed-canadian-researchers-find/article29488842/}.
+
+\item B Jacka, T Applegate, \uline{AF Poon}, J Raghwani, PR Harrigan, K DeBeck, MJ Milloy, M Krajden, A Olmstead, JB Joy, BD Marshall, K Hayashi, OG Pybus, VD Lima, G Magiorkinis, J Montaner, F Lamoury, GJ Dore, E Wood, and J Grebely.  \textbf{2016.}  Transmission of hepatitis C virus infection among younger and older people who inject drugs in Vancouver, Canada.  \textit{J Hepatol} 64(6): 1247-1255.
+
+\item Kinloch, N, DR MacMillan, AQ Le, LA Cotton, DR Bangsberg, S Buchbinder, M Carrington, J Fuchs, PR Harrigan, B Koblin, M Kushel, M Markowitz, K Mayer, MJ Milloy, MT Schechter, T Wagner, BD Walker, JM Carlson, \uline{AFY Poon}, and ZL Brumme.  \textbf{2016.}  Population-level immune-mediated adaptation in HIV-1 polymerase during the North American Epidemic.  \textit{J Virol} 90(3): 1244-1258.
+
+\item JB Joy, RH Liang, RM McCloskey, T Nguyen, and \textbf{\uline{AFY Poon}}.  \textbf{2016.} PLOS Computational Biology Topic Page: Ancestral reconstruction.  \textit{PLOS Comput Biol} 12(7): e1004763.
+
+
+\item AQ Le, J Taylor, W Dong, R McCloskey, C Woods, R Danroth, K Hayashi, MJ Milloy, \textbf{\uline{AFY Poon*}}, and ZL Brumme* (joint senior authors).  \textbf{2015.}  Differential evolution of a CXCR4-using HIV-1 strain in CCR5wt/wt and CCR5$\delta$32/$\delta$32 hosts revealed by longitudinal deep sequencing and phylogenetic reconstruction.  \textit{Sci Rep}, 5: 17607.
+
+\item A Karakas, Z Brumme, and \textbf{\uline{AFY Poon}}.  \textbf{2015.}  A global database-driven assessment of HIV-1 adaptation to the immune repertoires of human populations.  \textit{J Virol} 89(20): 10693-10695.
+
+\item H Lapointe, W Dong, G Lee, D Bangsberg, J Martin, R Mocello, Y Boum II, A Karakas, D Kirkby, \uline{AFY Poon}, PR Harrigan, and CJ Brumme. \textbf{2015.}  HIV Drug Resistance Testing by High-Multiplex ``Wide'' Sequencing on the Illumina MiSeq.  \textit{Antimicrob Agents Chemother} 59(11): 6824-6833.
+
+\item C Chui, W Dong, J Joy, \uline{A Poon}, W Dong, T Mo, C Woods, C Beatty, H Hew, PR Harrigan, and C Brumme.  \textbf{2015.}  Development and validation of two screening assays for the HCV NS3 Q80K polymorphism associated with reduced response to combination treatment regimens containing simeprevir.  \textit{J Clin Microbiol} 53(9): 2942-2950.
+
+\item FMJ Lamoury, B Jacka, S Bartlett, RA Bull, A Wong, J Amin, J Schinkel, \uline{A Poon}, GV Matthews, J Grebely, GJ Dore, and TL Applegate.  \textbf{2015.}  The influence of Hepatitis C Virus genetic region on phylogenetic clustering analysis.  \textit{PLOS ONE} 10(7): e0131437.
+
+\item \textbf{\uline{AFY Poon}}.  \textbf{2015.}  Phylodynamic inference with kernel ABC and its application to HIV epidemiology.  \textit{Mol Biol Evol} 32(9): 2483-2495.
+
+\item A Olmstead, JB Joy, V Montoya, I Luo, \uline{AFY Poon}, B Jacka, F Lamoury, T Applegate, J Montaner, Y Khudyakov, J Grebely, D Cook, PR Harrigan, and M Krajden.  \textbf{2015.} A Molecular Phylogenetics-Based Approach for Identifying Recent Hepatitis C Virus Transmission Events.  \textit{Infect Genet Evol} 33: 101-109.
+
+\item RM McCloskey, RH Liang, JB Joy, M Krajden, JSG Montaner, PR Harrigan, and \uline{\textbf{AFY Poon}}.  \textbf{2015.} Global origin and transmission of hepatitis C virus NS3 Q80K polymorphism.  \textit{J Infect Dis} 211 (8): 1288-1295.
+
+\item \uline{\textbf{AFY Poon}}, JB Joy, CK Woods, S Shurgold, G Colley, CJ Brumme, RS Hogg, JSG Montaner, and PR Harrigan.  \textbf{2015.} The impact of clinical, demographic and risk factors on rates of HIV transmission.  A population-based phylogenetic analysis in British Columbia, Canada.  \textit{J Infect Dis} 211(6): 926-935.\\
+$\bigstar$  Editorial commentary.  Frost, SDW and D Pillay.  J Infect Dis 211(6): 856-858.  
+
+\item B Jacka, T Applegate, M Krajden, A Olmstead, PR Harrigan, BDL Marshall, K DeBeck, M-J Milloy, F Lamoury, O Pybus, V Lima, G Magiorkinis, V Montoya, J Montaner, J Joy, C Woods, S Dobrer, GJ Dore, \uline{\textbf{AF Poon}}* and J Grebely* (\textit{joint senior authors}).   \textbf{2014.}  Phylogenetic clustering of hepatitis C virus among people who inject drugs in Vancouver, Canada.  \textit{Hepatology} 60(5): 1571-1580.
+
+\item DJHF Knapp, RA McGovern, \uline{AFY Poon}, X Zhong, LC Swenson, W Dong and PR Harrigan.  \textbf{2014.} `Deep' Sequencing Accuracy and Reproducibility using Roche/454 technology for Inferring Co-Receptor Usage in HIV-1.  \textit{PLOS ONE} 9(6): e99508.
+
+\item RH Liang, T Mo, W Dong, GQ Lee, LC Swenson, RM McCloskey, CK Woods, CJ Brumme, PR Harrigan, and \textbf{\uline{AFY Poon}}.  \textbf{2014.}  Theoretical and experimental assessment of degenerate primer tagging in ultra-deep applications of next-generation sequencing.  \textit{Nucl Acids Res} 42(12): e98.
+
+\item RM McCloskey, RH Liang, PR Harrigan, ZL Brumme, and \textbf{\uline{AFY Poon}}. \textbf{2014.}  An evaluation of phylogenetic methods for reconstructing transmitted HIV variants using longitudinal clonal HIV sequence data.  \textit{J Virol} 88(11): 6181-6194.
+
+\item LA Cotton, XT Kuang, AQ Le, JM Carlson, B Chan, DR Chopera, CJ Brumme, TJ Markle, E Martin, A Shahid, G Anmole, P Mwimanzi, P Nassab, KA Penney, MA Rahman, MJ Milloy, MT Schechter, M Carrington, BD Walker, T Wagner, S Buchbinder, J Fuchs, B Koblin, K Mayer, PR Harrigan, MA Brockman, \uline{AFY Poon}, and ZL Brumme.  \textbf{2014.}  Genotypic and functional impact of HIV-1 adaptation to its host population during the North American epidemic.  \textit{PLOS Genetics}, 10(4): e1004295.
+
+\item B Muhire, G Michael, B Murrell, P Lefeuvre, J-M Lett, A Gray, \uline{A Poon}, N Ngandu, Y Semegni, E Tanov, A Monjane, G Harkins, A Varsani, D Shepherd, and D Martin.  \textbf{2013.}  Evidence of pervasive biologically functional secondary-structures within the genomes of eukaryotic single-stranded DNA viruses.  \textit{J Virol}, 88(4): 1972-1989.
+
+\item \textbf{\uline{AFY Poon}}, LW Walker, R McCloskey, H Murray, PR Harrigan, and RH Liang.   \textbf{2013.} Mapping the shapes of phylogenetic trees from human and zoonotic RNA viruses.  \textit{PLOS ONE}, 8(11): e78122.
+
+\item CJ Brumme, KD Huber, W Dong, \uline{AFY Poon}, PR Harrigan, and N Sluis-Cremer.  \textbf{2013.} Replication fitness of multiple nonnucleoside reverse transcriptase-resistant HIV-1 variants in the presence of etravirine measured by 454 deep sequencing.  \textit{J Virol}, 87 (15): 8805-8807.
+
+\item RA McGovern, J Symons, \uline{AFY Poon}, PR Harrigan, SF van Lelyveld, A Hoepelman, P van Ham, W Dong, A Wensing, and M Nijhuis.  \textbf{2013.} Maraviroc Treatment in Non-R5 HIV-1 Infected Patients Results in the Selection of Extreme CXCR4-Using Variants with Limited Effect on the Total Viral Setpoint.  \textit{J Antimicrob Chemo}, 68(9): 2007-2014.
+
+\item LC Swenson, WWY Dong, T Mo, J Demarest, D Chapman, S Ellery, J Heera, H Valdez, \uline{AFY Poon}, and PR Harrigan.  \textbf{2013.}  Use of Cellular HIV DNA to Predict Virologic Response to Maraviroc: Performance of Population-based and Deep Sequencing.  \textit{Clin Infect Dis}, 56(11): 1659-1666.
+
+\item GQ Lee, PR Harrigan, W Dong, \uline{AFY Poon}, J Heera, J Demarest, A Rinehart, D Chapman, H Valdez, and S Portsmouth. \textbf{2013.} Comparison of population and 454 ``deep'' sequence analysis versus the original Trofile assay in non-B subtypes for HIV tropism.  \textit{AIDS Res Hum Retrovir} 29(6): 979-984.
+
+\item DJHF Knapp, RA McGovern, W Dong, \uline{AFY Poon}, LC Swenson, X Zhong, C Woods, and PR Harrigan.  \textbf{2013.}  Factors influencing the sensitivity and specificity of conventional sequencing in Human Immunodeficiency Virus-1 tropism testing.  \textit{J Clin Microbiol} 51(2): 444-451.
+
+\item \textbf{\uline{AFY Poon}}, LC Swenson, EM Bunnik, D Edo-Matas, H Schuitemaker, AB van't Wout, and PR Harrigan.  \textbf{2012.}  Reconstructing the dynamics of HIV evolution within hosts from serial deep sequence data.  \textit{PLOS Comput Biol} 8(11): e1002753.
+
+\item GQ Lee, LC Swenson, \uline{AFY Poon}, JN Martin, H Hatano, SG Deeks, and PR Harrigan.  \textbf{2012.}  Prolonged and Substantial Discordance in Prevalence of Raltegravir-resistant HIV-1 in Plasma versus PBMC Samples Revealed by 454 ``Deep'' Sequencing.  \textit{PLOS ONE} 7(9): e46181.
+
+\item JL Aldous, SK Pond, \uline{A Poon}, S Jain, H Qin, JS Kahn, M Kitahata, B Rodriguez, AM Dennis, SL Boswell, R Haubrich, and DM Smith.  \textbf{2012.} Characterizing HIV Transmission Networks across the United States.  {\it Clin Infect Dis} 55(8): 1135-1143.
+
+\item SLK Pond, B Murrell, and \textbf{\uline{AFY Poon}}.  {\bf 2012}.  Evolution of viral genomes -- interplay between selection, recombination and other forces.  \textit{Methods Mol Biol} 856: 239-72.
+
+\item CU Rang, AY Peng, \uline{AF Poon}, and L Chao.  {\bf 2012.}  Aging in \textit{Escherichia coli} requires damage by an extrinsic agent.  \textit{Microbiology}, 158: 1553-1559.
+
+\item A Gonzalez-Serna, RA McGovern, PR Harrigan, F Vidal, \uline{AFY Poon}, S Ferrando-Martinez, MA Abad, M Genebat, M Leal, and E Ruiz-Mateos.  {\bf 2012.} Correlation of the virological response to short-term Maraviroc monotherapy with standard and deep sequencing-based genotypic tropism methods.  {\it Antimicrob Agents Chemother}, 56(3): 1202-1207.
+
+\item \textbf{\uline{AFY Poon}}, RA McGovern, T Mo, DJHF Knapp, B Brenner, J-P Routy, MA Wainberg, PR Harrigan.  {\bf 2011.}  Dates of HIV infection can be estimated for seroprevalent patients by coalescent analysis of serial next-generation sequencing data.  {\it AIDS}, 25(16): 2019-2026.
+
+\item V Tai, \uline{AFY Poon}, IT Paulson, B Palenik.  {\bf 2011.}  Selection in Coastal Synechococcus (Cyanobacteria) Populations Evaluated from Environmental Metagenomes.  {\it PLOS ONE} 6(9): e24249.
+
+\item \textbf{\uline{AFY Poon}}, JL Aldous, CW Mathews, M Kitahata, JS Kahn, MS Saag, B Rodr\'iguez, SL Boswell, SDW Frost, RH Haubrich.  {\bf 2011.}  Transmitted Drug Resistance in the CFAR Network of Integrated Clinical Systems Cohort: Prevalence and Effects on Pre-Therapy CD4 and Viral Load. {\it PLOS ONE} 6(6): e21189.
+
+\item DJHF Knapp, PR Harrigan, \uline{AFY Poon}, ZL Brumme, M Brockman, S Huang, and PK Cheung.  {\bf 2011.} In vitro selection of clinically-relevant bevirimat resistance mutations revealed by “deep” sequencing of serially-passaged, quasispecies-containing recombinant HIV-1.  {\it J Clin Microbiol}, 49(1): 201-208.
+
+\item SL Lamers, \uline{AFY Poon}, and MS McGrath.  {\bf 2011.} HIV-1 nef protein structures associated with brain infection and dementia pathogenesis.  {\it PLOS ONE}, 6(2): e16659.
+
+\item W Delport, \uline{AFY Poon}, SDW Frost, and SL Kosakovsky Pond.  {\bf 2010.} Datamonkey 2010:~a suite of phylogenetic analysis tools for evolutionary biology.  {\it Bioinformatics}, 26(19): 2455-2457.
+
+\item \textbf{\uline{AFY Poon}}, LC Swenson, WY Dong, SL Kosakovsky Pond, DD Richman, PR Harrigan, and SDW Frost.  {\bf 2010.}  Phylogenetic analysis of population-based and deep sequencing data to identify coevolving sites in the {\it nef} gene of HIV-1.  {\it Mol Biol Evol} 27(4): 819-832.
+
+\item W Manosuthi, DM Butler, J Pérez-Santiago, \uline{AFY Poon}, SK Pillai, SR Mehta, ME Pacold, DD Richman, SK Pond, DM Smith. {\bf 2010.}  Protease polymorphisms in HIV-1 subtype CRF01\_AE represent selection by antiretroviral therapy and host immune pressure.  {\it AIDS} 24: 411-416.
+
+\item SL Kosakovsky Pond, K Scheffler, \uline{AFY Poon}, MB Gravenor, and SDW Frost.  {\bf 2010}.  Evolutionary fingerprinting of genes.  {\it Mol Biol Evol}, 27(3): 520-536.
+
+\item SL Kosakovsky Pond, D Posada, C Chappey, E Stawinski, \uline{AFY Poon}, MB Gravenor, AJ Leigh Brown, and SDW Frost. {\bf 2009}.  An evolutionary model-based algorithm for accurate phylogenetic breakpoint mapping and subtype prediction in HIV-1.  {\it PLOS Comput Biol}, 5(11): e1000581.
+
+\item \textbf{\uline{AFY Poon}}, KC Brouwer, SA Strathdee, MA Firestone Cruz, RM Lozada, C Magis-Rodriguez, SL Kosakovsky Pond, D Heckathorn, and SDW Frost.   {\bf 2009.} Parsing social network survey data from hidden populations using stochastic context-free grammars.  {\it PLOS ONE}, 4(9): e6777.
+
+\item SJ Lycett, M Ward, FI Lewis, \uline{AFY Poon}, SL Kosakovsky Pond, and AJ Leigh Brown.  {\bf 2009}. Detection of mammalian virulence determinants in highly pathogenic avian influenza H5N1 viruses: multivariate analysis of published data.  {\it J Virol} 83(19): 9901-9910.
+
+\item \textbf{\uline{AFY Poon}}, SDW Frost, and Kosakovsky Pond, SL.  {\bf 2009}.  Detecting selection in DNA sequences with Datamonkey.  \textit{Methods Mol Biol} 537: 163-183.
+
+\item PS Jordan, \uline{AFY Poon}, J Enron, K Squires, C Ignacio, DD Richman, and DM Smith.  {\bf 2009.}  A novel codon insert in protease of clade B HIV type 1.  {\it AIDS Res Hum Retrovir} 25(5): 547-550.
+
+\item BH Davis, \uline{AFY Poon}, and MC Whitlock.  {\bf 2009.} Compensatory mutations are repeatable and clustered within proteins.  {\it Proc Roy Soc Lond B} 276(1663): 1823-1827.
+
+\item PR Harrigan, C-W Sheen, V Gill, B Wynhoven, E Hudson, V Lima, P Lecocq, \uline{AFY Poon}, and N Sluis-Cremer.  {\bf 2008.}  Silent mutations are selected in HIV-1 reverse transcriptase and affect enzymatic efficiency.  {\it AIDS} 22(18): 2501-2508.
+
+\item \textbf{\uline{AFY Poon}}, FI Lewis, SDW Frost, and SL Kosakovsky Pond.  Spidermonkey: rapid detection of co-evolving sites using Bayesian graphical models.  {\bf 2008}.  {\it Bioinformatics} 24(17): 1949-1950.
+
+\item SL Kosakovsky Pond, \uline{AFY Poon}, AJ Leigh Brown, and SDW Frost.  A maximum likelihood method for detecting directional evolution in protein sequences and its application to Influenza A virus.  {\bf 2008}.  {\it Mol Biol Evol} 25(9): 1809-1824.
+
+\item H Streeck, B Li, \uline{AFY Poon}, A Schneidewind, AD Gladden, KA Power, SB Bazner, C Brander, ES Rosenberg, S Frost, M Altfeld, and TM Allen.  Immune driven HIV-1 recombination and loss of control following superinfection. {\bf 2008}. {\it J Exp Med} 206(8): 1789-1796.
+
+\item SL Kosakovsky Pond, \uline{AFY Poon}, CS Zarate, DM Smith, SJ Little, SK Pillai, RJ Ellis, JK Wong, AJ Leigh Brown, DD Richman, and SDW Frost.  {\bf 2008}.  Estimating selection pressures on HIV-1 using phylogenetic likelihood models.  {\it Stat Med} 27(23): 4779-4789.
+
+\item ER Cachay, SDW Frost, \uline{AFY Poon}, D Looney, SM Rostami, ME Pacold, DD Richman, SJ Little, and DM Smith.  {\bf 2008}.  Herpes simplex virus type 2 (HSV-2) acquisition during recent HIV infection does not influence plasma HIV levels.  {\it J Acquir Immune Defic Syndr} 47(5): 592-596.
+
+\item \textbf{\uline{AFY Poon}}, FI Lewis, SL Kosakovsky Pond, and SDW Frost.  {\bf 2007}.  An evolutionary-network model reveals stratified interactions in the V3 loop of the HIV-1 envelope.  {\it PLOS Comput Biol} 3(11): e231.  doi:10.1371/journal.pcbi.0030231.
+
+\item \textbf{\uline{AFY Poon}}, SL Kosakovsky Pond, DD Richman, and SDW Frost.  {\bf 2007}.  Mapping protease inhibitor resistance to HIV-1 sequence polymorphisms within patients.  {\it J Virol} 81(24): 13598-13607.
+
+\item H Lapp, S Bala, JP Balhoff, A Bouck, N Goto, M Holder, R Holland, A Holloway, T Katayama, PO Lewis, A Mackey, BI Osborne, WH Piel, SL Kosakovsky Pond, \uline{AFY Poon}, W-G Qui, JE Stajich, A Stolzfus, T Thierer, AJ Vilella, RA Vos, CM Zmasek, D Zwickl, and TJ Vision.  {\bf 2007}.  The 2006 NESCent Phyloinformatics Hackathon: A field report.  {\it Evol Bioinform} 3: 357-366.
+
+\item \textbf{\uline{AFY Poon}}, SL Kosakovsky Pond, P Bennett, DD Richman, AJ Leigh Brown, and SDW Frost.  {\bf 2007}.  Adaptation to human populations is revealed by within-host polymorphisms in HIV-1 and hepatitis C virus.  {\it PLOS Pathog} 3(3): e45.  %doi:10.1371/journal.ppat.0030045
+
+\item \textbf{\uline{AFY Poon}}, FI Lewis, SL Kosakovsky Pond, and SDW Frost.  {\bf 2007}.  Evolutionary interactions between N-linked glycosylation sites in the HIV-1 envelope.  {\it PLOS Comput Biol} 3(1): e11.  %doi:10.1371/journal.pcbi.0030011
+
+\item \textbf{\uline{AFY Poon}} and L Chao.  {\bf 2006}.  Functional origins of fitness-effect sizes of compensatory mutations in the DNA bacteriophage $\phi$X174.  {\it Evolution} 60(10): 2032-2043.
+
+\item \textbf{\uline{A Poon}}, BH Davis, and L Chao.  {\bf 2005}.  The Coupon Collector and the Suppressor Mutation: estimating the number of suppressor mutations by maximum likelihood.  {\it Genetics} 170(3): 1323-1332.
+
+\item \textbf{\uline{A Poon}} and L Chao.  {\bf 2005}.  The rate of compensatory mutation in the bacteriophage $\phi$X174.  {\it Genetics} 170(3): 989-999.
+
+\item \textbf{\uline{A Poon}} and L Chao.  {\bf 2004}.  Drift increases the advantage of sex in bacteriophage $\phi$6.  {\it Genetics} 166 (1): 19-24.
+
+\item \textbf{\uline{A Poon}} and SP Otto.  {\bf 2000}.  Compensating for our load of mutations: freezing the meltdown of small populations.  {\it Evolution} 54(5): 1469-1479.
+
+\end{enumerate}
+
+\vspace{1em}
+
+
+
+\section{Pending Publications}
+
+\begin{itemize}
+
+\item \uline{AFY Poon}, E Ndashimye, M Avino, R Gibson, F Kyeyune, I Nankya, ME Qui\~nones-Mateu, and EJ Arts.  First-line HIV treatment failures in non-B subtypes and recombinants: A cross-sectional analysis of multiple populations in Uganda.  In prep.
+
+\item \uline{AFY Poon}, JL Prodger, BA Lynch, J Lai, SJ Reynolds, J Kasule, AA Capoferri, SL Lamers, CW Rodriguez, D Bruno, SF Porcella, C Martens, RF Siliciano, JD Siliciano, TC Quinn, and AD Redd.  Quantitation of the latent HIV-1 reservoir with Bayesian analysis of next-generation sequence variation.  Submitted.
+
+\item RM McCloskey and \uline{AFY Poon}.   A model-based clustering method to detect infectious disease transmission outbreaks from sequence variation.  Submitted.
+
+\item K Klein, G Nickel, I Nankya, E Ndashimye, C Kwok, PL Chen, \uline{A Poon}, M Munjoma, T Chipato, P Mugyenyi, RA Salata, CS Morrison, and EJ Arts.
+Higher sequence diversity in the vaginal tract than in blood at acute and early HIV-1 infection.
+PLOS Pathogens.
+Revision requested.
+
+\item BR Jones, J Horacsek, JB Joy, ZL Brumme, and \uline{\textbf{AFY Poon}}.  Blind dating: a phylogenetic approach to dating HIV reservoir sequences.  In revision.
+
+\item JFS Mann, K Klein, J Pankrac, PF McKay, DFL King, CN Wijewardhana, T Biru, DH Canaday, M Avino, \uline{AF Poon}, Y Gao, C Foster, S Fidler, RJ Shattock, and EJ Arts.
+A heterologous activator vector vaccine (ACT-VEC) induces HIV-1 latency reversal in human CD4+ T cells.
+Submitted.
+
+\item RH Liang, T Nguyen, RA McGovern, AK Karakas, JB Joy, PR Harrigan and \uline{\textbf{AFY Poon}}.  A phylogenetic change-detection method for discovering recent selective sweeps.  In revision.
+
+\item RM Gibson, G Nickels, F Kyeyune, C Venner, I Nankya, E Nabulime, E Ndashimye, \uline{AF Poon}, RA Salata, P Mugyenyi, ME Qui\~nones-Mateu, and EJ Arts.
+Hidden HIV-1 resistance to zidovudine and implications to treatment outcomes in low- to middle-income countries.
+Submitted.
+
+\item T Nguyen and \uline{\textbf{AFY Poon}}.  Umberjack: Phylogenetic inference from next-generation shotgun sequencing data by sliding windows.  In revision.
+
+\item L Chindelevitch, \uline{A Poon}, and C Colijn.  Networks, spectra and infections: the shapes of pathogen phylogenies.  Submitted.
+
+%\item Knapp, DJHF, RA McGovern, W Dong, \uline{AFY Poon}, X Zhong, and PR Harrigan.  Template availability and minority peak threshold are the strongest determinants of minority species sequence detection in population-based genotypic tropism testing for human immunodeficiency virus 1.  Submitted.
+
+%NL Hepler, MD Smith, W Delport, JA Young, \uline{AFY Poon}, and SL Kosakovsky Pond.  A bioinformatics pipeline for the analysis and interpretation of ultradeep sequence data.  Submitted.
+
+%Alejandro Gonzalez-Serna, Rachel McGovern, Richard Harrigan, Francesc Vidal, Arthur Poon, Sara Ferrando-Martinez, Maria A. Abad, Miguel Genebat, Manuel Leal, and Ezequiel Ruiz-Mateos
+%Longitudinal ``deep'' sequence analysis of dual/mixed infected patients treated with maraviroc demonstrates rapid selection for only most strongly X4-tropic virus.  Submitted.
+
+%\item Walker, LW, SLK Pond, JL Aldous, \uline{AFY Poon}, S Sun, S Jain, SDW Frost, and RH Haubrich.  Representation and comparison of structured treatment data for statistical analyses: an application to HIV-1 antiretroviral regimens.  In review.
+
+%Delport, W, JA Young, \uline{AFY Poon}, and SL Kosakovsky Pond. A bioinformatics pipeline for the analysis and interpretation of HIV-1 ultradeep sequence data.  In revision.
+
+%\item \uline{Poon, AFY}, C Brumme, and PR Harrigan.  Identifying the agents of selection by reconstructing evolution and imputing ancestral environments.  In revision.
+
+%Lee, GQ, LC Swenson, \uline{AFY Poon}, JN Martin, SG Deeks and PR Harrigan.  Discordance in prevalence of raltegravir-resistant HIV-1 in plasma versus PBMC samples.  Submitted.
+
+
+%\item Knapp, DJHF, \uline{AFY Poon}, CJ Brumme, CK Woods, W Dong, T Mo, ZL Brumme, and PR Harrigan.  Therapy-associated mutations in the near-complete proteome of Human Immunodeficiency Virus-1 suggests that most strongly selected sites are likely confined to the protease-Reverse Transcriptase regions of the virus.  
+
+%\uline{Poon, AFY} and SDW Frost.  Modeling heterogeneity of infectious disease prevalence in respondent-driven samples of hidden populations.  In prep.
+
+%Zarate, CS, \uline{AFY Poon}, SJ Little, DD Richman, and SDW Frost.  Effect of host genetics on HIV-1 viral and CD4+ dynamics and variation in pol in individuals with recent HIV infection.  Submitted.
+
+%\uline{Poon, AFY}, DD Richman, and SDW Frost.  Tracing pathways of resistance to reverse transcriptase inhibitors from sequencing mixtures in HIV-1.  In prep.
+\end{itemize}
+
+
+%\vspace{1em}
+
+\section{Book Chapters}
+
+\begin{enumerate}
+
+%\item  Pond, SLK, B Murrell, and \uline{AFY Poon}.  {\bf 2012}.  Evolution of viral genomes -- interplay between selection, recombination and other forces.  In {\it Evolutionary Genomics: Statistical and Computational Methods.}  M Anisimova, ed.  Springer (Humana).  ISBN: 978-1-61779-584-8
+
+\item Joy, JB, RH Liang, T Nguyen, RM McCloskey, and \textbf{AFY Poon}.  \textbf{2015.}  Origin and Evolution of Human Immunodeficiency Viruses.  {\em Global Virology I - Identifying and Investigating}.  Springer, New York.
+
+\item Brumme, ZL, \uline{AFY Poon}, J Carlson, and BD Walker.  Identifying HLA-associated polymorphisms in HIV-1.  {\bf 2010}.  In {\em HIV Molecular Immunology 2010.}  BTM Korber, C Brander, BF Haynes, R Koup, JP Moore, BD Walker, and DI Watkins.  Los Alamos National Laboratory, Theoretical Biology and Biophysics, Los Alamos, New Mexico.  %http://www.hiv.lanl.gov/content/immunology/contents2010. html
+
+\item Kosakovsky Pond, SL, \uline{AFY Poon}, and SDW Frost.  Estimating selection pressures on alignments of coding sequences.  {\bf 2009}.  In {\em The Phylogenetic Handbook: A Practical Approach to DNA and Protein Phylogeny, 2nd ed.} M Salemi and A-M Vandamme, eds.  Cambridge University Press.  ISBN: 978-0-52173-071-6.
+
+%\item \uline{AFY Poon}, SDW Frost, and Kosakovsky Pond, SL.  {\bf 2009}.  Detecting selection in DNA sequences with Datamonkey.  In Bioinformatics for DNA Sequence Analysis (Methods in Molecular Biology vol.~537).  Humana Press.  ISBN: 978-1-58829-910-9.
+
+\end{enumerate}
+
+
+%\vspace{1em}
+
+
+\section {Published Conference Abstracts}
+
+\begin{enumerate}
+
+\item JB Joy, WB Dong, CB Chui, CJ Brumme, \uline{A Poon}, H Hew, R Harrigan.  \textbf{2015.}  Stability and prevalence of the NS3 Q80K polymorphism over time within HCV genotype 1a infected patients in Canada.  \textit{Hepatology} 62(S1): 1102A-1103A.
+
+\item NN Kinloch, DR Macmillan, AQ Le, LA Cotton, R Mccloskey, DR Bangsberg, S Buchbinder, M Carrington, J Fuchs, PR Harrigan, B Koblin, M Markowitz, K Mayer, MJ Milloy, MT Schechter, T Wagner, BD Walker, JM Carlson, AFY Poon, ZL Brumme.  \textbf{2015.} Population-level spread of immune-driven mutations in HIV-1 polymerase during the North American epidemic.  \textit{J Int AIDS Soc} 18(S4): 31.
+
+\item J Joy, R Liang, R McCloskey, T Nguyen, C Brumme, G Colley, R Hogg, J Montaner, PR Harrigan, \uline{A Poon}.  \textbf{2015.}  Phylogenetically estimated HIV diversification rates reveal prevention of HIV-1 by antiretroviral therapy.  \textit{J Int AIDS Soc} 18(S4): 30.
+
+\item A Le, J Taylor, W Dong, R McCloskey, C Woods, K Hayashi, MJ Milloy, PR Harrigan, \uline{AFY Poon}, ZL Brumme.  \textbf{2015.}  Within-host evolution of X4 HIV-1 in a rare transmission pair revealed by phylogenetic reconstruction of deep-sequence data.  \textit{J Int AIDS Soc} 18(S4): 89.
+
+\item AD Olmstead, V Montoya, J Joy, \uline{AF Poon}, B Jacka, F Lamoury, T Applegate, J Montaner, Y Khudyakov, J Grebely, D Cook, PR Harrigan and M Krajden.  \textbf{2015.}  P081: Birth cohort and risk factors in Hepatitis C patients recorded at the Sentinel Units Network in Argentina 2007?2014.  \textit{J Viral Hepatitis} 22(S2): 60.
+
+
+\item A Olmstead, M Krajden, V Montoya, J Grebely, AFY Poon, PR Harrigan, JB Joy.  \textbf{2014.}  P232 Molecular phylogenetics of hepatitis C virus (HCV) as a tool to understand the HCV epidemic in British Columbia (BC), Canada.  \textit{J Hepatol} 60(1): S143.
+
+\item B Jacka, \uline{A Poon}, TL Applegate, M Krajden, A Olmstead, R Harrigan, BD Marshall, K DeBeck, MJ Milloy, F Lamoury, O Pybus, V Lima, G Magiorkinis, V Montoya, J Montaner, J Joy, GJ Dore, T Kerr, E Wood, J Grebely.  \textbf{2014.}  Hepatitis C virus network dynamics among people who inject drugs in Vancouver, Canada.  \textit{Hepatology} 60: 907A-908A.
+
+\item A Olmstead, V Montoya, J Joy, I Luo, NZ Janjua, \uline{A Poon}, B Jacka, F Lamoury, TL Applegate, J Grebely, R Harrigan, M Krajden.  \textbf{2014.}  Molecular sequencing and phylogenetics as enhanced surveillance tools for monitoring Hepatitis C virus transmission dynamics in British Columbia.  \textit{Hepatology} 60: 283A.
+
+\item B Jacka, T Applegate, \uline{AF Poon}, R Harrigan, GJ Dore, A Olmstead, K DeBeck, M-J Milloy, F Lamoury, C Woods, Z Brumme, S Dobrer, V Dias Lima, J Montaner, J Joy, BD Marshall, T Kerr, E Wood, M Krajden, and J Grebely.  {\bf 2014.}  Temporal changes in hepatitis C virus genotype 3a distribution among people who inject drugs in Vancouver, Canada.  \textit{J Hepatology} 60(1): S324-S325.
+
+\item RH Liang, JB Joy, PR Harrigan, and \uline{AF Poon}.  {\bf 2014.} Application of change detection and ancestral state reconstruction to the detection of natural selection.  \textit{Can J Infect Dis Med Microbiol} 25: 26A.
+
+\item \uline{Poon, AF}, JB Joy, CK Woods, S Shurgold, G Colley, CJ Brumme, RS Hogg, JS Montaner, and PR Harrigan.  {\bf 2014.}  Population-level phylogenetic analyses quantify the impact of clinical, demographic, and risk factors on variations in HIV transmission rates in British Columbia, Canada.  \textit{Can J Infect Dis Med Microbiol} 25: 26A.
+
+\item Joy, JB, RH Liang, CK Woods, S Shurgold, G Colley, CJ Brumme, RS Hogg, B Jacka, A Olmstead, J Grebely, M Krajden, JS Montaner, PR Harrigan, and \uline{AF Poon}.  {\bf 2014.}  Genetic diversification and population level phylodynamic analysis of the British Columbia Human Immunodeficiency Virus (HIV) and Hepatitis C (HCV) epidemics.  \textit{Can J Infect Dis Med Microbiol} 25: 48A.
+
+\item Lee, GQ, C Lachowski, E Martin, C Charpentier, C Rodriguez, B Visseaux, C Fagard, J-M Molin, C Katlama, Y Yazadanpanah, D Descamps, \uline{AF Poon}, and PR Harrigan.  {\bf 2014.}  Comparison of 454 (Roche) versus MiSeq (Illumina) deep sequencing technologies in clinical samples from the (ANRS) 139 TRIO trial.  \textit{Can J Infect Dis Med Microbiol} 25: 48A.
+
+\item A Le, R McGovern, J Taylor, R Danroth, CJ Brumme, T Kerr, M Milloy, PR Harrigan, \uline{AF Poon}, Z Brumme. \textbf{2013.} Transmission and Ultradeep Sequence Evolution of CXCR4 Using HIV-1 in an Individual Homozygous for the CCR5 Delta-32 Mutation.  \textit{AIDS Res Hum Retrovir} 29(11): A78.
+
+\item Cotton, L, XT Kuang, AQ Le, JM Carlson, B Chan, DR Chopera, CJ Brumme, TJ Markle, E Martin, A Shahid, G Anmole, P Mwimanzi, P Nassab, KA Penney, MA Rahman, M Milloy, MT Schechter, BD Walker, T Wagner, S Buchbinder, J Fuchs, B Koblin, K Mayer, P Harrigan, MA Brockman, AF Poon, ZL Brumme.  \textbf{2013.}  Impact of HLA Selection Pressure on HIV-1 Evolution and Fitness During the North American Epidemic.  \textit{AIDS Res Hum Retrovir} 29(11): A177.
+
+\item Liang, RH, PR Harrigan, T Mo, WY Dong, G Lee, L Swenson, R McCloskey, C Woods, C Brumme, and \uline{A Poon}.  {\bf 2013.} Impact of experimental conditions on the utility of ``primer ID'' tagging for next-generation HIV sequencing.  \textit{Can J Infect Dis Med Microbiol} 24 (Supplement A): 10A.
+
+\item McCloskey, RM, ZL Brumme, PR Harrigan, RH Liang, and \uline{AFY Poon}.  {\bf 2013.} Reconstructing transmitted HIV genotypes by phylogenetic analysis of serial samples.   \textit{Can J Infect Dis Med Microbiol} 24 (Supplement A): 27A.
+
+\item \uline{Poon, AF}, C Woods, CJ Brumme, and PR Harrigan.  Large-scale phylogenetic analysis of HIV sequences to reconstruct historical epidemic dynamics and transmitted drug resistance in British Columbia, Canada.  \textit{Can J Infect Dis Med Microbiol} 24 (Supplement A): 76A.
+
+\item Cotton, L, D Chopera, K Penney, J Carlson, E Martin, A Le, T Kuang, B Walker, J Fuchs, S Buchbinder, T Wagner, M John, S Mallal, B Koblin, K Mayer, A Poon, M Brockman, Z Brumme.  \textbf{2012.}  Limited evidence for alterations in Gag-mediated HIV replication capacity over the course of the North American epidemic (1979-present).  \textit{Retrovirology} 9(Suppl.~2): P157.  
+
+\item Scheffler, K, L Hepler, MD Smith, W Delport, \uline{AFY Poon}, D Richman, SL Kosakovsky Pond.  {\bf 2012.}  Workshop: Error correction, noise filtering, and phylogenetic analysis of HIV sequences using the 454 platform.  2012 IEEE 2nd International Conference on Computational Advances in Bio and Medical Sciences (ICCABS).
+
+\item \uline{Poon, A}, L Swenson, D Edo-Matas, EM Bunnik, H Schuitemaker, AB van't Wout, PR Harrigan.  {\bf 2011.}  Timing the emergence of predicted CXCR4-using HIV variants within patient compartments by the coalescent analysis of V3 deep sequence data.  International Workshop on HIV \& Hepatitis Virus Drug Resistance and Curative Strategies, Los Cabos, M\'exico.  {\it Antivir Ther.}~16 Suppl 1: A35.
+
+\item Lamers, SL, GB Fogel, L Huysentruyt, A Poon, and MS McGrath.  {\bf 2010.}  The HIV nef protein within ARL is genetically and structurally distinct from those in the brain of patients with HAD.  \textit{Infectious Agents and Cancer} 5 Suppl.~1: A77.
+
+\item Frost, SDW, C Mathews, M Saag, M Kitahata, B Rodriguez, J Kahn, S Boswell, WB Lober, M Lederman, S Sun, \uline{AFY Poon}, S Jain, RH Haubrich and the CNICS Study Team.  {\bf 2008.}  Representing complex regimen data in the CNICS (CFAR network of integrated clinical systems) cohort.  XVI International HIV Drug Resistance Workshop: Basic Principles \& Clinical Implications, Barbados, West Indes.  {\it Antivir Ther.}~12: S168.
+
+\end{enumerate}
+
+
+
+\vspace{1em}
+
+
+\section{Conference Presentations}
+
+Only presentations as first or senior author \textbf{in the past 5 years} are shown.\\
+{\bf O} = oral presentation; {\bf P} = poster presentation
+
+\vspace{1em}
+
+\begin{itemize}
+
+\item[\bf O] R McCloskey and A Poon.  A model-based genetic clustering method for detecting variation in HIV transmission rates.  24th International HIV Dynamics \& Evolution Meeting.  Sleat, Scotland.  May 24, 2017.
+
+\item[\bf P] BR Jones and AFY Poon.  Reconstructing within-host HIV dynamics from sequence variation with a simulation-based phylodynamic method.  24th International HIV Dynamics \& Evolution Meeting.  Sleat, Scotland.  May 24, 2017.
+
+\item[\bf O] R McCloskey and A Poon.  HIV genetic clustering for molecular epidemiology: why it doesn't work and how we can fix it.  26th Annual Canadian Conference on HIV/AIDS Research.  Montr\'eal, Canada.  April 8, 2017.  
+
+\item[\bf P] BR Jones, J Horacsek, J Joy, Z Brumme, and A Poon.  Blind dating: phylogenetic determination of latent HIV sequence ages within host.  24th Conference on Retroviruses and Opportunistic Infections.  Seattle, WA, USA.  February 13-16, 2017. 
+
+\item[\bf P] D McVea, R Liang, J Joy, PR Harrigan, and A Poon.  A framework for predicting phylogenetic clusters of HIV at high risk for growth.  24th Conference on Retroviruses and Opportunistic Infections.  Seattle, WA, USA.  February 13-16, 2017. 
+
+\item[\bf O] JB Joy, W Dong, DR Kirkby, J Grebley, RH Liang, V Tai, A Howe, PR Harrigan, and AF Poon.  Next generation sequencing reveals the temporal complexity of mixed hepatitis C infections among people who inject drugs in Vancouver, BC, Canada.  The 25th Annual Canadian Conference on HIV/AIDS Research.  Winnipeg, Canada.  May 13, 2016.
+
+\item[\bf P] BR Jones, J Horacsek, JB Joy, ZL Brumme, and AF Poon.  Blind Dating: A Phylogenetic Approach to Dating HIV Reservoir Sequences.   The 25th Annual Canadian Conference on HIV/AIDS Research.  Winnipeg, Canada.  May 13, 2016.
+
+\item[\bf O] RM McCloskey and \uline{AFY Poon}.  Phylogenetic estimation of contact network parameters with kernel ABC.  23rd International HIV Dynamics \& Evolution Meeting.  Woods Hole, Massachusetts, USA.  April 25, 2016.
+
+\item[\bf O] \uline{AFY Poon}, CK Woods, S Shurgold, G Colley, RS Hogg, DM Moore, M Krajden, R Gustafson, JSG Montaner, and PR Harrigan.  Implementation of a near real-time monitoring system for localized HIV outbreaks in British Columbia, Canada.  2015 National HIV Prevention Conference.  Atlanta, Georgia.  December 7, 2015.
+
+\item[\bf P] RH Liang, E Martin, RM McCloskey, D Kirkby, J Nakagawa, J Horacsek, T Nguyen, H Lapointe, CJ Brumme, PR Harrigan, and \uline{AFY Poon}.  Kive: a framework for version control of bioinformatics pipleines and data, and its application to HIV resistance genotyping.  8th IAS Conference on HIV Pathogenesis, Treatment \& Prevention. Vancouver, Canada.  July 21, 2015.
+
+\item[\bf P] \uline{AFY Poon}, CK Woods, S Shurgold, G Colley, RS Hogg, M Krajden, DM Moore, R Gustafson, JSG Montaner, and PR Harrigan. Near real-time tracking of localized HIV outbreaks using an automated phylogenetic monitoring system: Implementation and translation to public health. 8th IAS Conference on HIV Pathogenesis, Treatment \& Prevention. Vancouver, Canada. July 22, 2015. 
+
+\item[\bf P] \uline{AFY Poon}. A new framework for reconstructing epidemic dynamics from virus sequences: model validation and application to the HIV CRF07-BC epidemic in China. 8th IAS Conference on HIV Pathogenesis, Treatment \& Prevention. Vancouver, Canada. July 21, 2015.
+
+\item[\bf O] \uline{AFY Poon}.  A tree shape kernel method to infer epidemiological parameters from RNA virus phylogenies.  21st International HIV Dynamics \& Evolution Meeting.  Tucson, Arizona.  May 8, 2014.
+
+\item[\bf P] Nguyen, T and \uline{AFY Poon}.  Selection profiles from shotgun sequencing of RNA virus populations by localized phylogenetic analysis.   21st International HIV Dynamics \& Evolution Meeting.  Tucson, Arizona.  May 8, 2014.
+
+\item[\bf P] Liang, R, J Joy, R McCloskey, T Nguyen, M Krajden, J Montaner, PR Harrigan, and \uline{AFY Poon}.  Global origin and transmissibility of HCV NS3 substitution Q80K that is associated with lower simeprevir susceptibility.   21st International HIV Dynamics \& Evolution Meeting.  Tucson, Arizona.  May 8, 2014.
+
+\item[\bf O] Joy, J, S Shurgold, G Colley, R Hogg, J Montaner, PR Harrigan, and \uline{AFY Poon}.  HIV diversification rate correlates with evolution and distribution of drug resistance.   21st International HIV Dynamics \& Evolution Meeting.  Tucson, Arizona.  May 8, 2014.
+
+\item[\bf P] Liang, R, J Joy, PR Harrigan, and \uline{AFY Poon}.  Detection of within-host adaptation by its effect on the pattern of mutations in the phylogeny.   21st International HIV Dynamics \& Evolution Meeting.  Tucson, Arizona.  May 8, 2014.
+
+\item[\bf O] Liang, R, JB Joy, PR Harrigan, and \uline{AFY Poon}.  Application of change detection and ancestral state reconstruction to the detection of natural selection.   23rd Annual Canadian Conference on HIV/AIDS Research.  St. John's, NL.  May 3, 2014. 
+
+\item[\bf P] Joy, JB, RH Liang, CK Woods, S Shurgold, G Colley, CJ Brumme, RS Hogg, B Jacka, A Olmstead, J Grebely, M Krajden, JS Montaner, PR Harrigan, and \uline{AF Poon}.  Genetic diversification and population level phylodynamic analysis of the British Columbia Human Immunodeficiency Virus (HIV) and Hepatitis C (HCV) epidemics.  23rd Annual Canadian Conference on HIV/AIDS Research.  St. John's, NL.  May 3, 2014. 
+
+\item[\bf O] \uline{Poon AFY}, JB Joy, CK Woods, S Shurgold, G Colley, CJ Brumme, RS Hogg, JSG Montaner, and PR Harrigan.  Population-level phylogenetic analyses quantify the impact of clinical, demographic, and risk factors on variations in HIV transmission rates in British Columbia, Canada.  23rd Annual Canadian Conference on HIV/AIDS Research.  St. John's, NL.  May 3, 2014.  
+
+\item[\bf P] \uline{AF Poon}, RH Liang, JB Joy, T Nguyen, RM McCloskey, M Krajden, JSG Montaner, and PR Harrigan.  Global origin of HCV NS3 substitution Q80K that is associated with lower simeprevir susceptibility (Late Breaker).  Conference on Retroviruses and Opportunistic Infections.  Boston, MA.  March 5, 2014.
+
+\item[\bf P] Joy, JB, R Liang, CK Woods, S Shurgold, G Colley, C Brumme, RS Hogg, JSG Montaner, PR Harrigan, and \uline{AFY Poon}.  Phylodynamic analysis of a regional HIV epidemic.   Conference on Retroviruses and Opportunistic Infections.  Boston, MA.  March 6, 2014.
+
+\item[\bf O] \uline{AFY Poon}, C Woods, S Shurgold, G Colley, CJ Brumme, and PR Harrigan.  Large-scale phylogenetic analysis of HIV sequences to reconstruct historical epidemic dynamics and transmitted drug resistance in British Columbia, Canada.  3rd International HIV Treatment as Prevention Workshop.  Vancouver, BC.  April 24, 2013.
+
+
+\item[\bf O] Liang, RH, PR Harrigan, T Mo, WY Dong, G Lee, L Swenson, R McCloskey, C Woods, C Brumme, and \uline{A Poon}.  Impact of experimental conditions on the utility of ``primer ID'' tagging for next-generation HIV sequencing.  22nd Annual Canadian Conference on HIV/AIDS Research.  Vancouver, BC.  12 April 2013.
+
+\item[\bf O] McCloskey, RM, ZL Brumme, PR Harrigan, RH Liang, and \uline{AFY Poon}.  Reconstructing transmitted HIV genotypes by phylogenetic analysis of serial samples.   22nd Annual Canadian Conference on HIV/AIDS Research.  Vancouver, BC.  12 April 2013.
+
+\item[\bf P] \uline{AF Poon}, C Woods, CJ Brumme, and PR Harrigan.  Large-scale phylogenetic analysis of HIV sequences to reconstruct historical epidemic dynamics and transmitted drug resistance in British Columbia, Canada.  22nd Annual Canadian Conference on HIV/AIDS Research.  Vancouver, BC.  13 April 2013.
+
+\item[\bf P] McCloskey, R, R Liang, PR Harrigan, Z Brumme, and \uline{AFY Poon}.  An evaluation of phylogenetic methods for reconstructing transmitted HIV variants using longitudinal clonal HIV sequence data.  20th Conference on Retroviruses and Opportunistic Infections.  Atlanta, GA.  March 2013.
+
+\item[\bf P] Liang, R, T Mo, W Dong, G Lee, L Swenson, R McCloskey, C Woods, C Brumme, PR Harrigan, and \uline{AFY Poon}.  Impact of experimental conditions on the utility of primer ID tagging for next-generation HIV sequencing.  20th Conference on Retroviruses and Opportunistic Infections.  Atlanta, GA.  March 2013.
+
+\item[\bf P] McGovern, RA, Z Brumme, C Johnson, R Hogg, E Wood, T Kerr, M Milloy, PR Harrigan, \uline{AFY Poon}, and the VANGUARD and VIDUS/ACCESS Cohort Studies.  Robust phylogenetic method to reconstruct dates of infection in HIV-1 seroconverters from different risk groups.  20th Conference on Retroviruses and Opportunistic Infections.  Atlanta, GA.  March 2013.
+
+%\item[\bf P] Brumme, CJ, B Chan, T Markle, J Carlson, E Martin, QA Le, K Penney, M Rahman, T Kuang, P Nassab, DR Chopera, M Markowitz, M John, S Mallal, BD Walker, B Koblin, K Mayer, MA Brockman, AFY Poon, ZL Brumme. Molecular and functional consequences of immune-mediated evolution in HIV-1 Nef during the North American epidemic.  AIDS Vaccine 2011.  Bangkok, Thailand.  September 2011.
+
+%\item[\bf O] \uline{Poon, AFY}, LC Swenson, D Edo-Matas, EM Bunnik, H Schutemaker, AB van't Wout, and PR Harrigan.  Reconstructing the emergence of predicted CXCR4-using HIV variants within patient compartments from deep sequence data: an expanded analysis. 19th International HIV Dynamics \& Evolution Conference.  Asheville, NC.  April 2012.
+
+%\item[\bf O]  Liang, RH, LC Swenson, D Edo-Matas, EM Bunnik, H Schuitemaker, AB van't Wout, PR Harrigan, \uline{AFY Poon}.  Detecting selective effects using tree reconstructions.  19th International HIV Dynamics \& Evolution Conference.  Asheville, NC.  April 2012.
+
+%\item[\bf P] \uline{Poon, AFY}, CJ Brumme, WWY Dong, RA McGovern, and PR Harrigan.  Alignment of next-generation sequences for estimation of times of HIV infection.  2nd International HIV Treatment as Prevention Workshop.  Vancouver, BC. April 2012.
+
+%\item[\bf P] \uline{Poon, AFY}, CJ Brumme and PR Harrigan.  Identifying host factors driving HIV adaptation by the imputation of ancestral environments.  19th Conference on Retroviruses and Opportunistic Infections.  Seattle, WA.  March 2012.
+%
+%\item[\bf O]  \uline{Poon, AFY}, LC Swenson, D Edo-Matas, EM Bunnik, H Schuitemaker, AB van't Wout, PR Harrigan.  Timing the emergence of predicted CXCR4-using HIV variants within patient compartments by the coalescent analysis of V3 deep sequence data.  {\it International Workshop on HIV \& Hepatitis Virus Drug Resistance and Curative Strategies.}  Los Cabos, Mexico.  June 2011.
+%
+%\item[\bf P] \uline{Poon, AFY}, CJ Brumme, E Martin, T Markle, QA Le, P Nassab, B Chan, M Rahman, K Penney, C Chui, C Woods, J Carlson, M Markowitz, M Brockman, BD Walker, B Koblin, K Mayer, ZL Brumme.  Reconstruction of ancestral pol sequences from historic samples shows modest adaptation of HIV-1 to host immune pressures in a North American population.  Keystone Symposium on Molecular and Cellular Biology: HIV Evolution, Genomics and Pathogenesis.  Whistler, Canada.  March 2011.
+%
+%\item[\bf O] Poon, AFY, R McGovern, PR Harrigan, T Mo, D Knapp, B Brenner, J-P Routy, and MA Wainberg.  Detecting selective sweeps in HIV-1 within patients in the Montr\'eal Primary HIV Infection (PHI) Cohort by phylogenetic analysis of next-generation sequencing data.  19th Annual Canadian Conference on HIV/AIDS Research.  Saskatoon, Canada.  May 2010.
+%
+%\item[\bf O] \uline{Poon, AFY}, L Walker, D Smith, PR Harrigan, DD Richman, SDW Frost and SL Kosakovsky Pond.  A predictive model of neutralization sensitivity from indel-rich variable loop regions in HIV-1 envelope sequences using a tree-based kernel method.  17th International Workshop on HIV Dynamics and Evolution.  Monterey, USA.  April 2010.
+%
+%\item[\bf P] \uline{Poon, AFY}, JL Aldous, WC Mathews, M Kitahata, J Kahn, MS Saag, B Rodr\'iguez, SL Boswell, SDW Frost and RH Haubrich.  Association with transmission of M184V/I and a reduced viral load in therapy-na\"ive patients in the CFAR Network of Integrated Clinical Systems cohort.  16th Conference on Retroviruses and Opportunistic Infections.  San Francisco, CA.  February 2010.
+
+%\item[\bf O] \uline{Poon, AFY}, LC Swenson, WY Dong, SL Kosakovsky Pond, DD Richman, PR Harrigan, and SDW Frost.  Phylogenetic Analysis of Co-Evolving Residues in HIV-1 NEF Using Population-Based and Deep Sequencing Data.  16th International Workshop on HIV Dynamics and Evolution.  Oxford, UK.  April 2009.
+
+%\item[\bf P] \uline{Poon, AFY}, SL Kosakovsky Pond, and SDW Frost.  Phylogenetic comparative methods using Bayesian graphical models in HyPhy and Spidermonkey.  15th International Workshop on HIV Dynamics and Evolution.  Santa Fe, New Mexico.  April 2008.
+%
+%\item[\bf P] \uline{Poon, AFY}, PR Harrigan, and SDW Frost.  Co-variation networks in HIV-1 Nef sequences from phylogenetic and mixtures analysis.  15th Conference on Retroviruses and Opportunistic Infections.  Boston, MA.  February 2008.
+%
+%\item[\bf P] \uline{Poon, AFY}, DD Richman, and SDW Frost.  Tracing pathways of resistance to reverse transcriptase inhibitors from sequencing mixtures in HIV-1.  15th Conference on Retroviruses and Opportunistic Infections.  Boston, MA.  February 2008.
+%
+%\item[\bf O] \uline{Poon, AFY}, SL Kosakovsky Pond, and SDW Frost.  Within-patient genetic variation and protease inhibitor resistance.  14th International Workshop on HIV Dynamics and Evolution.  Segovia, Spain.  April 2007.
+%
+%\item[\bf O] \uline{Poon, AFY}, FI Lewis, and SDW Frost.  A phylogenetic-network model of interactions in the V3 loop of the HIV-1 envelope.  14th International Workshop on HIV Dynamics and Evolution.  Segovia, Spain.  April 2007.
+%
+%\item[\bf P] \uline{Poon, AFY}, SL Kosakovsky Pond, and SDW Frost.  Detecting shifts in HIV-1 diversification rates within patients: a language-based analysis of reconstructed sequence phylogenies.  16th International AIDS Conference.  Toronto, Canada.  August 2006.
+%
+%\item[\bf P] \uline{Poon, AFY}, FI Lewis, SL Kosakovsky Pond, and SDW Frost.  Detection of N-linked glycosylation site interactions in HIV-1 envelope proteins by Bayesian network analysis.  13th Conference on Retroviruses and Opportunistic Infections (CROI).  Denver, USA.  February, 2006.
+%
+%\item[\bf P] \uline{Poon, AFY}, SL Kosakovsky Pond, DD Richman, AJ Leigh Brown, and SDW Frost.  Evolutionary consequences of within-host transient polymorphisms in HIV-1.  13th International Workshop on HIV Dynamics and Evolution.  2006.
+%
+%\item[\bf O] \uline{Poon, AFY} and L Chao.  The rate of compensatory mutation in the bacteriophage $\phi$X174. Evolutionary Biology in the Pacific Northwest (EVO-WIBO), 2004.
+%
+%\item[\bf O] \uline{Poon, A} and SP Otto.  Compensating for our load of mutations: freezing the meltdown of small populations.  Joint Meetings of the Society for the Study of Evolution, the American Society of Naturalist and the Society of Systematic Biologists.  Bloomington, USA. 2000.
+
+
+\end{itemize}
+
+%Poon, A and SP Otto.  Compensating for our load of mutations: freezing the meltdown of small populations.  Joint Meetings of the Society for the Study of Evolution, the American Society of Naturalist and the Society of Systematic Biologists.  Bloomington, USA. 2000.
+
+%\vspace{1em}
+
+\section {Invited Lectures and Workshops}
+
+Truncated to the past five years (2013-2017).
+
+\begin{itemize}
+
+\item Invited workshop participant.  Mathematical Approaches to Evolutionary Trees and Networks.  Banff International Research Station for Mathematical Innovation and Discovery.  Banff, Canada.  February 12-17, 2017.
+
+\item Instructor.  Workshop on viruses and next-generation sequencing.  Cuernavaca, M\'exico.  November 24, 2016.
+
+\item Speaker.  Applied Mathematics Colloquium.  London, Canada.  November 16, 2016.
+
+\item Speaker.  Topical Research in Computer Science (TRICS) Seminar Series.  London, Canada.  November 2, 2016.
+
+\item Speaker.  Failure to Launch: Challenges in bringing next-generation sequencing into the clinical HIV laboratory.  Dr.~Robert Zhong Seminar in Pathology and Laboratory Medicine.  London, Canada.  October 13, 2016.
+
+\item Presenter.  Phylogenetic Community/Expert Consultation Meeting.  HIV Center for Clinical and Behavioural Studies; Treatment Action Group; and New York City Department of Health \& Mental Hygiene.  New York, USA.  September 19, 2016.
+
+\item Invited speaker.  1st Annual Third Coast Center for AIDS Research Symposium.  Chicago, USA.  March 31, 2016.
+
+\item Invited speaker.  Public Health Grand Rounds, BC Centre for Disease Control. New bioinformatics technologies for clinical infectious disease laboratories.  February 2, 2016.
+
+\item Presenter.  Alliance Coordinating Office Webinar.  Bioinformatics: Phylogenetics for HIV 101.  January 20, 2016.
+
+\item Invited speaker.  Forefront Lecture Series, BC Centre for Excellence in HIV/AIDS.  Vancouver, Canada.  November 4, 2015. 
+
+\item Workshop instructor.  Bioinformatics Bootcamp, 8th IAS Conference on HIV Pathogenesis, Treatment \& Prevention.  Vancouver, Canada.  July 21, 2015.
+
+\item Invited speaker.  Lessons from implementing a phylogenetic monitoring system of HIV outbreaks in British Columbia, Canada.  UN 90-90-90 Target Workshop: Lessons from the Field.  Vancouver, Canada.  July 18, 2015.
+
+\item Guest speaker.  University of Western Ontario, Department of Microbiology and Immunogloy. RGE Murray Seminar Series. November 18, 2014.
+
+\item Invited speaker.  International Association of Providers of AIDS Care.  Controlling the HIV epidemic with antiretrovirals: Avoiding the cost of inaction.  London, England. September 18, 2014.
+
+\item Invited speaker.  National Center for AIDS/STD Control and Prevention and the Chinese Center for Disease Control and Prevention.  Beijing, China.  November 25, 2013.
+
+\item Guest speaker.  Vancouver Bioinformatics Users Group (VanBUG).  March 7, 2013.
+
+\item Invited speaker.  UBC Centre for Blood Research, Summer Seminar Series.  March 20, 2013.
+
+\item Guest speaker.  UBC James Hogg Research Centre, Friday Seminar Series.  January 18, 2013.
+
+%\item Plenary Speaker.  7th Centro de Investigaci\'on en Enfermedades Infecciosas (CIENI)/Instituto Nacional de Enfermidades Respiratorias (INER) Meeting.  Oaxaca, M\'exico.  November 8, 2012.
+
+%\item Speaker. St. Paul's Hospital Department of Medicine Grand Medical Rounds.  October 4, 2012.
+%
+%\item Speaker, Grassroots to Global -- Showcasing Collaborative and Interdisciplinary Research in HIV/AIDS at SFU, Simon Fraser University, Canada.  October 7, 2011.
+%
+%\item Guest speaker, 3rd Annual Retreat, Centre for Microbial Diversity and Evolution, University of British Columbia, Canada.  May 12, 2011.
+%
+%\item Forefront Lecture Series, BC Centre for Excellence in HIV/AIDS, Vancouver, Canada.  April 13, 2011.
+%
+%\item Invited Paper Session (Network Sampling), Statistical Society of Canada 2010 Annual Meeting, Qu\'ebec City, Canada. May 26, 2010.
+%
+%\item Invited IMPACT-HIV seminar, Simon Fraser University Interdisciplinary Research in the Mathematical and Computational Sciences (IRMACS), Vancouver, Canada.  March 26, 2010.
+%
+%\item Biodiversity Internal Seminar Series, University of British Columbia.  March 8, 2010.
+%
+%\item Center for Infectious Disease Dynamics (CIDD) Workshop on Virus Adaptation on Multi-host Fitness Landscapes.  July 17, 2008.
+%
+%\item 1st.~International Theoretical-Practice Course of Analysis of Sequences and Polymorphic Markers by Population Genetic Software.  Centro de Investigaci\'on y de Estudios Avanzados del IPN (CINVESTAV).  M\'exico City, M\'exico.  July 29, 2008.
+%
+%\item Universidad Aut\'onoma de la Ciudad de M\'exico.  M\'exico City, M\'exico. July 2008.
+%
+%\item Partners AIDS Research Center, Boston, MA.  June 2008.
+%
+%\item Vertex Pharmaceuticals, Cambridge, MA.  February 2008.
+%
+%\item 1st NESCent Phyloinformatics Hackathon: Lowering the Barrier.  Open-source phylogenetics working group.  Durham, North Carolina, 2006.  %http://www.nescent.org/wg\_phylo-informatics/Phylohackathon\_1.
+
+\end{itemize}
+
+
+
+%\clearpage
+
+\section{Teaching Experience}
+
+\begin{longtable}{@{}p{1.2in}p{3.7in}p{1.3in}}
+{\bf Role} & {\bf Course/Institution} & {\bf Dates}\\
+\hline
+Instructor & Bioinformatic Data Processing with Python (PATH 9577Q)\newline {\em Western University} & 2017 Apr-Jul\\
+Guest lecturer & Biological and Social Determinants of Infectious Disease (MICB 3500B)\newline {\em Western University} & Mar 3, 2017\\
+Guest lecturer & Special Topics in Bioinformatics (CMPT 829) \newline {\em Simon Fraser University} & Oct 19, 2016\\
+Guest lecturer & Viral Infections in Humans (MICB407/PATH437)\newline {\em University of British Columbia} & Oct 24 \& 29, 2014;\newline Oct 9 \& 14, 2015\\
+Perceptor & UBC Internal Medicine Elective:\newline Translational Bioinformatics & 2013-present\\
+Instructor & Directed Studies, Biology Program (BIOL 448)\newline Aram Karakas\newline {\em University of British Columbia} & 2013 Sep-2014 Apr\\
+Guest lecturer & Human Population Genetics \& Evolution\newline {\em Simon Fraser University} & 2012-02-21\\
+Co-instructor & Human Population Genetics \& Evolution\newline {\em Simon Fraser University} & 2011 Jan-Apr\\
+Guest lecturer & Human Population Genetics \& Evolution\newline {\em Simon Fraser University} & 2010\\
+Instructor and\newline \hspace*{1ex}organizer & Applied Phylogenetics for the Health Sciences workshop\newline {\em Simon Fraser University} & 2011-02-21\\
+Instructor & 1st International Theoretical-Practice Course:\newline Analysis of Sequences and Polymorphic Markers by population genetic software\newline{\em Instituto Polit\'ecnico Nacional}, M\'exico City, M\'exico & 2008-07-29\\
+Teaching assistant & Applied Quantitative Analysis\newline {\em University of California, San Diego} & 2006\\
+\hline
+\end{longtable}
+
+
+\section {Mentoring activities}
+
+\begin{itemize}
+
+\item \textbf{Hannah Ajoge} \hfill December 2016\\
+Provided bioinformatics advice and career mentorship to postdoctoral fellow in Dr.~Stephen Barr's lab at Western University.  % 2 hours
+
+\item \textbf{Werner Smidt} \hfill October 10-November 10, 2016\\
+Visiting postdoctoral fellow from the University of Pretoria, South Africa.
+ 
+\item \textbf{Ashleigh Sullivan} \hfill December 21-22, 2015\\
+Trained visiting field surveillance officer from the Public Health Agency of Canada on basic concepts in sequence alignment, phylogenetic reconstruction and clustering analysis.
+
+\item \textbf{Eric Enns} \hfill August 27-30, 2015\\
+Trained visiting bioinformatician from the Public Health Agency of Canada on bioinformatic methods for processing data from an Illumina MiSeq system.
+
+\item \textbf{Caitlin Harrigan} \hfill April 25-28, 2014\\
+Supervised a visiting student from a local high school, with whom I had several discussions covering basic concepts in bioinformatics and phylogenetics, and their applications in a clinical setting.
+This student has since gone on to pursue a degree in bioinformatics as an undergraduate at the University of Toronto.
+
+\item \textbf{Tarah Lynch} \hfill January 31-February 1, 2014\\
+Provided training in bioinformatics and phylogenetics for visiting scientist from Alberta Health services.
+
+
+\end{itemize}
+
+\section {Trainees}
+
+\begin{itemize}
+
+\item \textbf{Erika Chadwick} \hfill November 2016 - present\\
+MCISc Pathologists' Assistant Graduate Program, Western University\\
+
+\item \textbf{David W.~Dick} (co-supervisor) \hfill November 2016 - present\\
+PhD student, Department of Applied Math, Western University\\
+Project: Using Hamiltonian Monte Carlo to quantify variation in HIV pathogenesis among subtypes
+
+\item \textbf{Emmanuel Ndashimye} (co-supervisor) \hfill February 2017 - present\\
+MSc student, Department of Microbiology \& Immunology, Western University\\
+Project: Meta-analyses of HIV-1 drug resistance in Uganda
+
+\item \textbf{Enid Chan} \hfill October 2016 - present\\
+Undergraduate thesis student, Medical Health Informatics, Western University
+
+\item \textbf{Cornelius Nesen} \hfill October 2016 - present\\
+Undergraduate thesis student, Medical Health Informatics, Western University
+
+\item \textbf{Mariano Avino} \hfill October 2016 - present\\
+Postdoctoral associate
+
+\item \textbf{David McVea} \hfill May 2016 - August 2016\\
+Masters of Public Health (MPH) residency\\
+Project: \textit{Predicting HIV clusters at high risk of growth}
+
+\item \textbf{Bradley Davis} \hfill January 2016 - August 2016\\
+Co-op student, Simon Fraser University\\
+Project: \textit{Reconstructing the age of HIV latent reservoirs}
+
+\item \textbf{Joshua Horacsek} \hfill January 2015 - August 2015\\
+Co-op student, Simon Fraser University\\
+Project: \textit{Imputing the age of integrated HIV DNA in latently infected cells and application to HIV cure research.}
+
+\item \textbf{Thuy Nguyen} \hfill September 2013 - present\\
+Graduate student, CIHR Bioinformatics Training Program\\
+Project: \textit{Phylogenetic inference from next-generation sequencing libraries of virus populations.}
+
+\item \textbf{Jeffrey B.~Joy, Ph.D.} \hfill January 2013 - present\\
+Postdoctoral fellow\\
+Project: \textit{Phylogenetic analysis of HIV evolution within and among hosts}
+
+\item \textbf{Richard H.~Liang, Ph.D.} \hfill July 2011 - present\\
+Postdoctoral fellow\\
+Project: \textit{Population genetics analysis of ultra-deep HIV sequence data}
+
+\item \textbf{Rosemary McCloskey} \hfill May 2012 - present\\
+Co-op student, Simon Fraser University\\
+\textit{Vice-President Research, Undergraduate Student Research Award recipient}\\
+Graduate student (start September 2014), CIHR Bioinformatics Training Program\\
+\textit{NSERC Postgraduate Scholarship recipient}\\
+Project: \textit{Ancestral reconstruction of transmitted HIV variants from longitudinal sequence data.}
+
+\item \textbf{Heather Murray} \hfill May 2012 - August 2012\\
+Co-op student, University of British Columbia\\
+UBC Centre for Blood Research Summer Studentship Award recipient\\
+Project: \textit{Validation of bioinformatic error correction pipelines for ultra-deep HIV sequencing data sets.}
+
+
+
+\end{itemize}
+
+\section{Academic Service}
+
+\begin{itemize}
+
+\item {\bf Member, Special Emphasis Panel/Scientific Review Group}, National Institutes of Health (US).  2017.
+
+\item {\bf Member, Research Based Graduate Education Committee}, Department of Pathology and Laboratory Medicine, Western University.  Dec 2016 - Dec2019.
+
+\item {\bf CIHR Doctoral Award Committee Member}, 2016, 2017.
+
+\item {\bf Graduate Committee membership}
+	\vspace{-1ex}
+	\begin{itemize}
+	\item Tingting Zhao (Ph.D.~candidate, University of British Columbia, 2016-present)
+	\item Anh Le (MSc, Simon Fraser University, 2013-2015).
+	\item Chanson Brumme (Ph.D.~candidate, University of British Columbia, 2011-2015)
+	\item Laura Cotton (Masters of Public Health, Simon Fraser University, 2011)
+	\end{itemize}
+
+\item {\bf Academic Editor}, PLOS ONE (since March 2009).
+
+\item {\bf Peer review (manuscripts)} --- 
+AIDS Research and Human Retroviruses; 
+American Naturalist; 
+Annals of Applied Biology; 
+Bioinformatics; 
+BioSystems; 
+BMC Evolutionary Biology; 
+Clinical Infectious Diseases;
+Evolution; 
+GENE; 
+Genetics; 
+Genome Research; 
+Heredity; 
+Infection, Genetics and Evolution; 
+Journal of Infectious Diseases;
+Journal of Molecular Evolution; 
+Journal of General Virology; 
+Journal of Theoretical Biology; 
+Journal of Virology;
+The Lancet Infectious Diseases; 
+Molecular Biology and Evolution; 
+Nucleic Acids Research; 
+PLOS Computational Biology; 
+PLOS Genetics; 
+PLOS Pathogens; 
+PLOS ONE; 
+Retrovirology; 
+Social Methodology;
+Virology Journal. 
+
+\item {\bf Peer review (grants)} --- Wellcome Trust, National Science Foundation, South African Medical Research Council, Netherlands Organization for Scientific Research (October 24, 2012), KU Leuven Research Council.
+
+\item {\bf Peer review (conference)} --- Annual Canadian Conference on HIV/AIDS Research  (CAHR), Basic Science abstract review team (2012-2015); 21st International HIV Dynamics \& Evolution Meeting, bioinformatics session co-chair (2014).
+
+\item {\bf Graduate Admissions Committee}, student representative, University of California, San Diego (UCSD), 2003.
+
+\item {\bf Teaching Assistant Coordinator}, UCSD, 2003.
+
+\item {\bf Society Memberships} --- Society for the Study of Evolution (SSE), 2001-2005; Canadian Society for Ecology and Evolution (CSEE), 2005-2008; American Society for Microbiology (ASM), 2007-2009.
+
+\end{itemize}
+
+\section{Computing skills, languages}
+
+\begin{tabular}{@{}p{1.2in}p{5in}}
+\hline
+Expert & Python, \textit{R}, \LaTeX, C/C++, Unix/Linux, \textit{HyPhy} batch language\\
+Intermedate & JavaScript (JQuery), HTML5, git, MPI; high performance computing cluster administration and maintenance\\
+Acquainted & Ruby, SQL (SQLite, Oracle PL/SQL), \textit{Mathematica}, PHP\\
+\hline
+\end{tabular}\\
+
+\textbf{GitHub repositories}\\
+\url{http://github.com/ArtPoon}\\
+\url{http://github.com/cfe-lab}\\
+%Note that some of my repositories are currently set to private access until release of the first beta version.
+
+\end{document}
+
+
+
+

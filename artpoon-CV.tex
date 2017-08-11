@@ -1,0 +1,89 @@
+\documentclass[11pt]{moderncv}
+
+\usepackage[sfdefault]{cabin}
+
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+
+\usepackage[scale=0.8]{geometry}
+
+
+% https://tex.stackexchange.com/questions/158803/add-a-table-of-contents-into-a-moderncv-document
+\makeatletter
+\newcommand\@pnumwidth{1.55em}
+\newcommand\@tocrmarg{2.55em}
+\newcommand\@dotsep{4.5}
+\makeatother
+\usepackage{titletoc}
+
+\makeatletter
+\setlength\columnsep{20pt}
+\setcounter{tocdepth}{1}
+\newcommand\contentsname{Contents}
+\newcommand\tableofcontents{%
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\section*{\contentsname}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+    \@starttoc{toc}%
+    }
+\usepackage{titletoc}
+\titlecontents*{section}[0pt]
+  {}{}{}
+  {, \itshape\thecontentspage}[\ \textbullet\ ][.]
+\renewcommand\l@subsection[2]{}
+\makeatother
+
+
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\arabic{enumiv}.}\makeatother
+
+\usepackage[resetlabels]{multibib}
+\newcites{book,misc}{{Books},{Others}}
+
+
+
+
+
+\name{Art F.~Y.}{Poon}
+\title{Curriculum vitae}
+\address{Health Sciences Addition, H422}{London, ON}{Canada N6A 5C1}
+\phone[office]{(519) 661-2111 ext.~87978}
+\email{apoon42@uwo.ca}
+
+
+\begin{document}
+
+\makecvtitle
+\tableofcontents
+
+
+\section{Education}
+
+\cventry{2000--2005}{PhD}{University of California, San Diego}{La Jolla}{Biology}{Thesis: Evolutionary consequences of the genetic environment on mutations in bacterial viruses (Dr.~Lin Chao)}
+\cventry{1998--2000}{MSc}{University of British Columbia}{Vancouver}{Zoology}{Thesis:  The evolution of the genetic load caused by recurrent mutations in small populations: genetic context and demographic history (Dr.~Sarah P.~Otto)}
+\cventry{1994--1998}{HonBSc}{University of Toronto}{Toronto}{Biology}{Thesis: Estimates of mutational variance in \textit{Drosophila melanogaster} (Dr.~David Houle)}
+
+
+\section{Publications}
+
+
+\renewcommand{\refname}{Peer-reviewed articles}
+%\renewcommand{\bibliographyitemlabel}{{\arabic{enumiv}.}}
+
+72 peer-reviewed articles; 33 as first or senior author.
+
+\nocite{*}
+
+\bibliographystyle{plainyr}
+\bibliography{publications}
+
+\vspace{1em}
+\nocitebook{*}
+\bibliographystylebook{plain}
+\bibliographybook{books}
+
+
+\end{document}
+
+
+
+
