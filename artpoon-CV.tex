@@ -5,6 +5,7 @@
 \moderncvstyle{casual}
 \moderncvcolor{blue}
 
+
 \usepackage[scale=0.8]{geometry}
 
 
@@ -34,6 +35,14 @@
 \makeatother
 
 
+\usepackage{xstring}
+\usepackage{soul}
+\setul{2pt}{1pt}
+\def\FormatName#1{%
+  \IfSubStr{#1}{Poon}{\ul{\textbf{#1}}}{#1}%
+}
+
+
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\arabic{enumiv}.}\makeatother
 
 \usepackage[resetlabels]{multibib}
@@ -44,11 +53,12 @@
 
 
 \name{Art F.~Y.}{Poon}
-\title{Curriculum vitae}
+%\title{Curriculum vitae}
 \address{Health Sciences Addition, H422}{London, ON}{Canada N6A 5C1}
 \phone[office]{(519) 661-2111 ext.~87978}
 \email{apoon42@uwo.ca}
-
+\social[github]{ArtPoon}
+\social[twitter]{art\_poon}
 
 \begin{document}
 
@@ -63,6 +73,39 @@
 \cventry{1994--1998}{HonBSc}{University of Toronto}{Toronto}{Biology}{Thesis: Estimates of mutational variance in \textit{Drosophila melanogaster} (Dr.~David Houle)}
 
 
+\section{Appointments}
+
+\cventry{August 2016--present}{Assistant Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{Primary appointment.}
+
+\cventry{June 2017--present}{Assistant Professor}{Department of Microbiology and Immunology}{Western University}{}{Cross-appointment.}
+
+\cventry{November 2016--present}{Assistant Professor}{Department of Applied Mathematics}{Western University}{}{Cross-appointment.}
+
+\cventry{March 2012--July 2016}{Assistant Professor, non-tenure track}{Department of Medicine}{University of British Columbia}{}{As an employee of Providence Health Care, I was held this honorary unpaid appointment to provide teaching, scholarly and service activities at the university.}
+
+\cventry{October 2015--July 2016}{Senior Research Scientist}{}{BC Centre for Excellence in HIV/AIDS}{}{}
+
+\cventry{October 2009 -- October 2015}{Associate Research Scientist, Bioinformatics}{}{BC Centre for Excellence in HIV/AIDS}{}{}
+
+\cventry{July 2010 -- June 2015}{Adjunct Assistant Professor}{Faculty of Health Sciences}{Simon Fraser University}{}{}
+
+\cventry{August 2008 -- August 2010}{Postdoctoral Fellow}{Department of Experimental Medicine}{University of British Columbia}{}{Supervisor: Dr.~P.~Richard Harrigan.}
+
+\cventry{August 2005 -- July 2008}{Postdoctoral Fellow}{Antiviral Research Center}{University of California, San Diego}{}{Supervisor: Dr.~Simon Frost.}
+
+
+
+\section{Awards and Recognitions}
+
+\cventry{2013--2018}{CIHR New Investigator Award}{CIHR Priority Announcement: CHVI Vaccine Discovery and Social Research}{CAD\$300,000}{}{Project title: Applied phylogenetics for HIV prevention.}
+
+\cventry{2012-2020}{Career Investigator Scholar Award}{Michael Smith Foundation for Health Research, St.~Paul's Hospital Foundation, and the Providence Health Care Research Institute}{CAD\$ 317,500}{}{Project title: Phylogenetic surveillance of the HIV epidemic in British Columbia.  In 2016, I declined the remainder of this award when I left British Columbia to accept a tenure-track appointment at Western University in Ontario.}
+
+\cventry{2008-2010}{CIHR Fellowship}{CIHR Fellowships Award in the Area of Biomedical/Clinical HIV/AIDS Research}{CAD\$97,500}{}{}
+
+\cventry{1998-2000}{Postgraduate Scholarship Award}{Natural Sciences and Engineering Research Council of Canada (NSERC)}{CAD\$37,000}{}{}
+
+
 \section{Publications}
 
 
@@ -73,12 +116,12 @@
 
 \nocite{*}
 
-\bibliographystyle{plainyr}
+\bibliographystyle{custom}
 \bibliography{publications}
 
 \vspace{1em}
 \nocitebook{*}
-\bibliographystylebook{plain}
+\bibliographystylebook{custom}
 \bibliographybook{books}
 
 
