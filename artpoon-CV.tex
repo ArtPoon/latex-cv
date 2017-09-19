@@ -52,8 +52,8 @@
 
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\arabic{enumiv}.}\makeatother
 
-\usepackage[resetlabels]{multibib}
-\newcites{book,misc}{{Books},{Others}}
+\usepackage[resetlabels,labeled]{multibib}
+\newcites{inprep,book,confpub}{{},{Books}, {Conference publications}}
 
 
 
@@ -119,18 +119,60 @@
 \renewcommand{\refname}{Peer-reviewed articles}
 %\renewcommand{\bibliographyitemlabel}{{\arabic{enumiv}.}}
 
-71 peer-reviewed articles; 33 as first or senior author.
+70 peer-reviewed articles; 33 as first or senior author.
 
 \nocite{*}
 
 \bibliographystyle{custom}
 \bibliography{publications}
 
+
+
 \vspace{1em}
 \nocitebook{*}
 \bibliographystylebook{custom}
-\bibliographybook{books}
+\bibliographybook{book}
 
+
+\nociteconfpub{*}
+\bibliographystyleconfpub{custom}
+\bibliographyconfpub{confpub}
+
+
+
+\section{Submitted publications}
+
+
+\nociteinprep{*}
+\bibliographystyleinprep{custom}
+\bibliographyinprep{inprep}
+
+
+
+\section{Grants}
+
+\subsection {Pending}
+
+\cventry{April 2018 -- March 2023}{Principal Applicant}{CIHR Project Grant}{Phylodynamics of HIV within hosts}{In review}{}
+
+\cventry{April 2018 -- March 2023}{Principal Applicant}{CIHR Project Grant}{Development, evaluation and implementation of genetic clustering methods for the real-time molecular surveillance of HIV outbreaks}{In review}{}
+
+\cventry{April 2018 -- March 2023}{Co-Applicant}{CIHR Project Grant}{Integrated phylogenetic, molecular and functional analyses of the within-host latent HIV reservoir}{In review}{Principal Applicant: Dr.~Zabrina Brumme}
+
+\cventry{April 2018 -- March 2021}{Co-Applicant}{CIHR Project Grant}{An Innovative and Highly Specific Approach for Detection of Salivary Biomarkers of Zika Fever}{In review}{Principal Applicant: Dr.~Walter Sequeira\\
+This application proposes to explore a new, uncharted area of diagnosing ZIKV by using
+saliva and proteomics, based on mass spectrometry.
+My role will be to provide bioinformatics support through the analysis of flavivirus genome sequence variation, to develop an optimized set of peptide probes}
+
+
+
+\subsection {Active}
+
+
+
+
+
+\subsection {Completed}
 
 \end{document}
 
