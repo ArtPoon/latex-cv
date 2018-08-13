@@ -18,6 +18,7 @@
 \usepackage[scale=0.8]{geometry}
 
 
+
 \usepackage{enumitem}
 \setlist{nolistsep}
 
@@ -76,16 +77,51 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 }
 
 
-%\makeatletter\renewcommand*{\bibliographyitemlabel}{\arabic{enumiv}.}\makeatother
+
 
 %\usepackage[resetlabels,labeled]{multibib}
 %\newcites{inprep,nopeer,book,confpub}{{},{Non-peer reviewed},{Books}, {Conference publications}}
 
-\usepackage[backend=biber]{biblatex}
-\addbibresource{publications.bib}
-\addbibresource{inprep.bib}
-\addbibresource{book.bib}
-\addbibresource{confpub.bib}
+\usepackage[backend=biber,style=numeric,maxbibnames=99,doi=false,sorting=ydnt]{biblatex}
+
+\DeclareFieldFormat{labelnumberwidth}{#1\adddot\midsentence}
+
+\DeclareFieldFormat{note}{\begin{small}\\\textcolor{violet}{#1}\end{small}}
+
+
+\AtEveryBibitem{%
+  \savefield{note}{\myadd}%
+  \clearfield{note}%
+  \newbibmacro{finentry}{
+    \restorefield{note}{\myadd}\printfield{note}
+    \finentry}%
+}
+
+\DeclareBibliographyCategory{important}
+
+\AtEveryBibitem{%
+  \ifcategory{important}%
+    {\bfseries}%
+    {}%
+  }
+  
+% fix indentation problem 
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{% label format from numeric.bbx
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+     {\setlength{\topsep}{0pt}% layout parameters from moderncvstyleclassic.sty
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
+
+
 
 
 \name{ Art F.~Y.}{ Poon}
@@ -155,32 +191,70 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 %\bibliographystyleinprep{custom}
 %\bibliographyinprep{inprep}
 
+\begin{refsection}[inprep.bib]
+\nocite{*}
+\printbibliography[heading=subbibliography]
+\end{refsection}
+
 
 
 \section{Publications}
 
 
-\renewcommand{\refname}{Articles}
+%\renewcommand{\refname}{Articles}
 %\renewcommand{\bibliographyitemlabel}{{\arabic{enumiv}.}}
 
 80 articles in total; 39 as first or senior author.
 
 \begin{refsection}[publications.bib]
 \nocite{*}
-\printbibliography
+\addtocategory{important}{%
+  Jones:2018,
+  Joy:2016a,
+  Klein:2017,
+  Delport:2010,
+  Poon:2005a,
+  Poon:2016a,
+}
+
+\printbibliography[heading=subbibliography,title=Articles]
 \end{refsection}
 
 %\nocite{*}
 %\bibliographystyle{custom}
 %\bibliography{publications}
 
+\begin{refsection}[book.bib]
 
+\renewbibmacro*{booktitle}{%
+  \ifboolexpr{
+    test {\iffieldundef{title}}
+    and
+    test {\iffieldundef{subtitle}}
+  }
+    {}
+    {\printtext{%
+     \printtext[titlecase]{\usefield{\uline}{title}}%
+     \setunit{\subtitlepunct}%
+     \printfield[titlecase]{subtitle}}%
+     \newunit}%
+  \printfield{titleaddon}}
+
+\nocite{*}
+\printbibliography[heading=subbibliography,title=Book chapters]
+\end{refsection}
 
 
 %\vspace{1em}
 %\nocitebook{*}
 %\bibliographystylebook{custom}
 %\bibliographybook{book}
+
+
+\begin{refsection}[confpub.bib]
+\nocite{*}
+\printbibliography[heading=subbibliography,title=Conference publications]
+\end{refsection}
 
 %\vspace{1em}
 %\nociteconfpub{*}
