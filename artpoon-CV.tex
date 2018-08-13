@@ -76,12 +76,16 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 }
 
 
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\arabic{enumiv}.}\makeatother
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\arabic{enumiv}.}\makeatother
 
-\usepackage[resetlabels,labeled]{multibib}
-\newcites{inprep,nopeer,book,confpub}{{},{Non-peer reviewed},{Books}, {Conference publications}}
+%\usepackage[resetlabels,labeled]{multibib}
+%\newcites{inprep,nopeer,book,confpub}{{},{Non-peer reviewed},{Books}, {Conference publications}}
 
-
+\usepackage[backend=biber]{biblatex}
+\addbibresource{publications.bib}
+\addbibresource{inprep.bib}
+\addbibresource{book.bib}
+\addbibresource{confpub.bib}
 
 
 \name{ Art F.~Y.}{ Poon}
@@ -146,10 +150,10 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \section{Manuscripts in progress}
 
-\vspace{-2em}
-\nociteinprep{*}
-\bibliographystyleinprep{custom}
-\bibliographyinprep{inprep}
+%\vspace{-2em}
+%\nociteinprep{*}
+%\bibliographystyleinprep{custom}
+%\bibliographyinprep{inprep}
 
 
 
@@ -159,23 +163,29 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \renewcommand{\refname}{Articles}
 %\renewcommand{\bibliographyitemlabel}{{\arabic{enumiv}.}}
 
-79 articles in total; 38 as first or senior author.
+80 articles in total; 39 as first or senior author.
 
+\begin{refsection}[publications.bib]
 \nocite{*}
- 
-\bibliographystyle{custom}
-\bibliography{publications}
+\printbibliography
+\end{refsection}
+
+%\nocite{*}
+%\bibliographystyle{custom}
+%\bibliography{publications}
 
 
-\vspace{1em}
-\nocitebook{*}
-\bibliographystylebook{custom}
-\bibliographybook{book}
 
-\vspace{1em}
-\nociteconfpub{*}
-\bibliographystyleconfpub{custom}
-\bibliographyconfpub{confpub}
+
+%\vspace{1em}
+%\nocitebook{*}
+%\bibliographystylebook{custom}
+%\bibliographybook{book}
+
+%\vspace{1em}
+%\nociteconfpub{*}
+%\bibliographystyleconfpub{custom}
+%\bibliographyconfpub{confpub}
 
 
 
