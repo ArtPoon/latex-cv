@@ -11,7 +11,8 @@
 \moderncvstyle{casual}
 \moderncvcolor{blue}
 
-\usepackage{ulem}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULthickness}{0.75pt}
 
 \usepackage{amssymb}
 
@@ -69,13 +70,12 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 \makeatother
 
 
-\usepackage{xstring}
-\usepackage{soul}
-\setul{2pt}{1pt}
-\def\FormatName#1{%
-  \IfSubStr{#1}{Poon}{\ul{\textbf{#1}}}{#1}%
-}
-
+%\usepackage{xstring}
+%\usepackage{soul}
+%\setul{2pt}{1pt}
+%\def\FormatName#1{%
+%  \IfSubStr{#1}{Poon}{\ul{\textbf{#1}}}{#1}%
+%}
 
 
 
@@ -84,11 +84,14 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \usepackage[backend=biber,style=numeric,maxbibnames=99,doi=false,sorting=ydnt]{biblatex}
 
+
+% https://tex.stackexchange.com/questions/208821/dont-use-brackets-in-bibliography-1-instead-of-1
 \DeclareFieldFormat{labelnumberwidth}{#1\adddot\midsentence}
 
+% customize note field
 \DeclareFieldFormat{note}{\begin{small}\\\textcolor{violet}{#1}\end{small}}
 
-
+% https://tex.stackexchange.com/questions/247908/ordering-of-the-bibliography-with-biblatex-notes-at-the-end
 \AtEveryBibitem{%
   \savefield{note}{\myadd}%
   \clearfield{note}%
@@ -97,15 +100,18 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
     \finentry}%
 }
 
-\DeclareBibliographyCategory{important}
 
+% https://tex.stackexchange.com/questions/149743/highlighting-particular-bibliography-entries
+\DeclareBibliographyCategory{important}
 \AtEveryBibitem{%
   \ifcategory{important}%
     {\bfseries}%
     {}%
   }
-  
-% fix indentation problem 
+
+
+% Fix indentation problem 
+% https://tex.stackexchange.com/questions/123805/creating-bibliographies-with-biblatex-and-moderncv/123809
 \defbibenvironment{bibliography}
   {\list
      {\printtext[labelnumberwidth]{% label format from numeric.bbx
@@ -120,6 +126,36 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   {\endlist}
   {\item}
 
+
+
+% https://tex.stackexchange.com/questions/274436/highlight-an-author-in-bibliography-using-biblatex-allowing-bibliography-style-t/274571#274571
+\usepackage{xpatch}
+\newbox\savenamebox
+\newbibmacro*{name:bbold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+\newbibmacro*{name:ebold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\egroup\uline{\usebox\savenamebox}\listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+\xpatchbibmacro{name:given-family}{\usebibmacro{name:delim}{#2#3#1}}{\usebibmacro{name:delim}{#2#3#1}\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+%\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+\xapptobibmacro{name:delim}{\begingroup\normalfont}{}{}
+\xapptobibmacro{name:given-family}{\usebibmacro{name:ebold}{#1}{#2}\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+\newcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}{
+  {b3324fc0fc91aa372072ac5658dc8c3c}, % Poon
+  {57594fa9362eafb685a0b98d0d315d77},
+  {ee6a5b525e101a9ca89c3fdf71c273b4},
+  {6474b5f6028a2672f7daa0ebbc4f25e5},
+  {2a282dd7bfd5f5d3af6443eda959365f},
+  {56f4dfd3205bf5d20ddec659e807299d},
+  {b1b8f8d3308b0817265d886bd179539f},
+  {d981ebf9b001695554390bc63698d980},
+  {02fb8792ce3fa37c9eae77f3da4fb214},
+  {985f05b7047185400eb816c9bab70dea}} 
 
 
 
@@ -688,7 +724,10 @@ $\bigstar$ My student (McCloskey) was awarded an Academic Scholarship to attend 
 
 \section {Student/Postdoctoral supervision}
 
+
 \cventry{2019/1 -- 2023/12}{Everlyn Kamau}{PhD student (accepted)}{Department of Microbiology \& Immunology}{Western University}{Primary supervisor}{}
+
+\cventry{2018/9 -- 2020/8}{John Palmer}{MSc student (accepted)}{Department of Pathology \& Laboratory Medicine}{Western University}{Primary supervisor}{}
 
 \cventry{2018/9 -- 2023/8}{Laura Munoz Baena}{PhD student (accepted)}{Department of Microbiology \& Immunology}{Western University}{Primary supervisor}{}
 
