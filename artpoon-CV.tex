@@ -38,8 +38,7 @@
   \par\addvspace{#1}}
 % A custom version of the itemize environment that sets the appropriate left
 % margin for use inside \cventylong
-\newlist{cvitemize}{itemize}{1}
-\setlist[cvitemize]{label=\labelitemi,%
+\newlist{cvitemize}{itemize}{1}\setlist[cvitemize]{label=\labelitemi,%
 leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 
@@ -82,7 +81,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 %\usepackage[resetlabels,labeled]{multibib}
 %\newcites{inprep,nopeer,book,confpub}{{},{Non-peer reviewed},{Books}, {Conference publications}}
 
-\usepackage[backend=biber,bibencoding=utf8,style=numeric,maxbibnames=99,doi=false,sorting=ydnt]{biblatex}
+\usepackage[backend=biber,bibencoding=utf8,style=numeric,maxbibnames=99,doi=false,sorting=ydnt,defernumbers=true]{biblatex}
 
 
 % https://tex.stackexchange.com/questions/208821/dont-use-brackets-in-bibliography-1-instead-of-1
@@ -155,7 +154,16 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   {b1b8f8d3308b0817265d886bd179539f},
   {d981ebf9b001695554390bc63698d980},
   {02fb8792ce3fa37c9eae77f3da4fb214},
-  {985f05b7047185400eb816c9bab70dea}} 
+  {985f05b7047185400eb816c9bab70dea},
+  {c49c028d5f89b7be824d74147e3ea0bf},  % McCloskey
+  {419887051bd070b2eeea462a518c2b30},
+  {41625bdfaea67d6b02ac48f8bb490f79},  % Jones
+  {e4023b4a5a82067601f7c8dd12f310a6},  % Joy
+  {7acf19bd8aeb012fc74be237b85b7460},
+  {f8d7947fd0a9ce85620d563dd3c31f08},
+  {08371db12de3d4f12c28e8488153d9d5},
+  {1e1b366f8d1dceef88198e95cdafdc9e},
+  } 
 
 
 
@@ -240,7 +248,9 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 %\renewcommand{\refname}{Articles}
 %\renewcommand{\bibliographyitemlabel}{{\arabic{enumiv}.}}
 
-80 articles in total; 37 as first or senior author.
+\cventry{}{80 articles in total (74 original research articles, 4 review articles, 2 commentaries). 
+I am listed as first or senior author in 37 articles (46.2\%)}{}{}{}{My name and the names of my past and current trainees are \uline{underlined} and \textbf{bold}.}
+
 
 \begin{refsection}[publications.bib]
 \nocite{*}
@@ -253,7 +263,11 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   Poon:2016a,
 }
 
-\printbibliography[heading=subbibliography,title=Articles]
+\printbibliography[heading=subbibliography,title=Original Research Articles,notkeyword=review,notkeyword=commentary]
+
+\printbibliography[heading=subbibliography,title=Review Articles,keyword=review]
+
+\printbibliography[heading=subbibliography,title=Commentaries,keyword=commentary]
 \end{refsection}
 
 %\nocite{*}
@@ -277,7 +291,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
   \printfield{titleaddon}}
 
 \nocite{*}
-\printbibliography[heading=subbibliography,title=Book chapters]
+\printbibliography[heading=bibliography,title=Book chapters]
 \end{refsection}
 
 
@@ -289,7 +303,7 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \begin{refsection}[confpub.bib]
 \nocite{*}
-\printbibliography[heading=subbibliography,title=Conference publications]
+\printbibliography[heading=bibliography,title=Conference publications]
 \end{refsection}
 
 %\vspace{1em}
