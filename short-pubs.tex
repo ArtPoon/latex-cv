@@ -1,0 +1,103 @@
+% !TEX root = artpoon-CV.tex
+
+\section{Manuscripts in progress}
+
+%\vspace{-2em}
+%\nociteinprep{*}
+%\bibliographystyleinprep{custom}
+%\bibliographyinprep{inprep}
+
+\defbibcheck{recent}{
+  \iffieldint{year}
+  {\ifnumless{\thefield{year}}{2020}
+    {\skipentry}
+    {}}
+  {\skipentry}
+}
+
+\begin{refsection}[inprep.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+
+%\sqrt{•}\clearpage
+
+\section{Publications}
+
+
+%\renewcommand{\refname}{Articles}
+%\renewcommand{\bibliographyitemlabel}{{\arabic{enumiv}.}}
+
+
+\cvitem{}{115 articles in total (107 original research articles, 5 review articles, 3 commentaries). 
+I am listed as first or senior author in 60 articles (52.2\%).}
+
+
+\cvitem{}{According to Google Scholar, my articles have been cited a total of 6,034 times with an $h$-index of 41.}
+
+
+\cvitem{}{My name and the names of my past and current trainees are \uline{underlined} and \textbf{bold}.}
+
+
+\begin{refsection}[publications.bib]
+\nocite{*}
+\addtocategory{important}{%
+olabode2021revisiting,
+munoz2021clustering,
+  Jones:2018,
+  Joy:2016a,
+  Klein:2017,
+  Delport:2010,
+  Poon:2005a,
+  Poon:2016a,
+}
+
+\printbibliography[heading=subbibliography, title=Original Research Articles, notkeyword=review, notkeyword=commentary, check=recent]
+
+\printbibliography[heading=subbibliography, title=Review Articles, keyword=review, check=recent]
+
+\printbibliography[heading=subbibliography, title=Commentaries, keyword=commentary, check=recent]
+\end{refsection}
+
+%\nocite{*}
+%\bibliographystyle{custom}
+%\bibliography{publications}
+
+\begin{refsection}[book.bib]
+
+\renewbibmacro*{booktitle}{%
+  \ifboolexpr{
+    test {\iffieldundef{title}}
+    and
+    test {\iffieldundef{subtitle}}
+  }
+    {}
+    {\printtext{%
+     \printtext[titlecase]{\usefield{\uline}{title}}%
+     \setunit{\subtitlepunct}%
+     \printfield[titlecase]{subtitle}}%
+     \newunit}%
+  \printfield{titleaddon}}
+
+\nocite{*}
+\printbibliography[heading=bibliography,title=Book chapters]
+\end{refsection}
+
+
+%\vspace{1em}
+%\nocitebook{*}
+%\bibliographystylebook{custom}
+%\bibliographybook{book}
+
+
+\begin{refsection}[confpub.bib]
+\nocite{*}
+\printbibliography[heading=bibliography,title=Conference publications]
+\end{refsection}
+
+%\vspace{1em}
+%\nociteconfpub{*}
+%\bibliographystyleconfpub{custom}
+%\bibliographyconfpub{confpub}
+
