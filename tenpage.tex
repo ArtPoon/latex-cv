@@ -1,0 +1,313 @@
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt]{moderncv}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\DeclareUnicodeCharacter{0301}{\'e}
+
+\usepackage[sfdefault]{cabin}
+
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+
+\usepackage[normalem]{ulem}
+\renewcommand{\ULthickness}{0.75pt}
+
+\usepackage{amssymb}
+
+\usepackage[scale=0.8, top=2cm, bottom=2.5cm]{geometry}
+
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+% A custom version of the \cventry command that supports large itemized lists
+% inside argument #7 (the custom cvitemize lists should be used!)
+\newcommand*{\cventrylong}[7][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+    \raggedleft\hintstyle{#2} &{%
+        {\bfseries#3}%
+        \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+        \ifthenelse{\equal{#5}{}}{}{, #5}%
+        \ifthenelse{\equal{#6}{}}{}{, #6}%
+    }%
+  \end{tabular}%
+  {\small#7}%
+  \par\addvspace{#1}}
+% A custom version of the itemize environment that sets the appropriate left
+% margin for use inside \cventylong
+\newlist{cvitemize}{itemize}{1}\setlist[cvitemize]{label=\labelitemi,%
+leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
+%C
+
+
+% https://tex.stackexchange.com/questions/158803/add-a-table-of-contents-into-a-moderncv-document
+\makeatletter
+\newcommand\@pnumwidth{1.55em}
+\newcommand\@tocrmarg{2.55em}
+\newcommand\@dotsep{4.5}
+\makeatother
+\usepackage{titletoc}
+
+\makeatletter
+\setlength\columnsep{20pt}
+\setcounter{tocdepth}{1}
+\newcommand\contentsname{Contents}
+\newcommand\tableofcontents{%
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\section*{\contentsname}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+    \@starttoc{toc}%
+    }
+\usepackage{titletoc}
+\titlecontents*{section}[0pt]
+  {}{}{}
+  {, \itshape\thecontentspage}[\ \textbullet\ ][.]
+\renewcommand\l@subsection[2]{}
+\makeatother
+
+
+% allow URLs to break on hyphens, better compatibility with hyperref
+\usepackage{xurl}
+\urlstyle{same}
+
+%\usepackage{xstring}
+%\usepackage{soul}
+%\setul{2pt}{1pt}
+%\def\FormatName#1{%
+%  \IfSubStr{#1}{Poon}{\ul{\textbf{#1}}}{#1}%
+%}
+
+
+
+%\usepackage[resetlabels,labeled]{multibib}
+%\newcites{inprep,nopeer,book,confpub}{{},{Non-peer reviewed},{Books}, {Conference publications}}
+
+\usepackage[backend=biber,bibencoding=utf8,style=numeric,maxbibnames=99,doi=false,sorting=ydnt,defernumbers=true]{biblatex}
+
+
+% https://tex.stackexchange.com/questions/208821/dont-use-brackets-in-bibliography-1-instead-of-1
+\DeclareFieldFormat{labelnumberwidth}{#1\adddot\midsentence}
+
+% customize note field
+\DeclareFieldFormat{note}{\begin{small}\\\textcolor{violet}{#1}\end{small}}
+
+% https://tex.stackexchange.com/questions/247908/ordering-of-the-bibliography-with-biblatex-notes-at-the-end
+\AtEveryBibitem{%
+  \savefield{note}{\myadd}%
+  \clearfield{note}%
+  \newbibmacro{finentry}{
+    \restorefield{note}{\myadd}\printfield{note}
+    \finentry}%
+}
+
+
+% https://tex.stackexchange.com/questions/149743/highlighting-particular-bibliography-entries
+\DeclareBibliographyCategory{important}
+\AtEveryBibitem{%
+  \ifcategory{important}%
+    {$\bigstar$}%
+    {}%
+  }
+
+
+% Fix indentation problem 
+% https://tex.stackexchange.com/questions/123805/creating-bibliographies-with-biblatex-and-moderncv/123809
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{% label format from numeric.bbx
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+     {\setlength{\topsep}{0pt}% layout parameters from moderncvstyleclassic.sty
+      \setlength{\labelwidth}{\hintscolumnwidth}%
+      \setlength{\labelsep}{\separatorcolumnwidth}%
+      \leftmargin\labelwidth%
+      \advance\leftmargin\labelsep}%
+      \sloppy\clubpenalty4000\widowpenalty4000}
+  {\endlist}
+  {\item}
+
+
+
+% https://tex.stackexchange.com/questions/274436/highlight-an-author-in-bibliography-using-biblatex-allowing-bibliography-style-t/274571#274571
+\usepackage{xpatch}
+\newbox\savenamebox
+\newbibmacro*{name:bbold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+\newbibmacro*{name:ebold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\egroup\uline{\usebox\savenamebox}\listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+\xpatchbibmacro{name:given-family}{\usebibmacro{name:delim}{#2#3#1}}{\usebibmacro{name:delim}{#2#3#1}\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+%\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+\xapptobibmacro{name:delim}{\begingroup\normalfont}{}{}
+\xapptobibmacro{name:given-family}{\usebibmacro{name:ebold}{#1}{#2}\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+\newcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}{
+  % NOTE: retrieve hash from .bbl file generated by biber
+  {b3324fc0fc91aa372072ac5658dc8c3c}, % Poon
+  {3e2eba6f59b8ec6ab05b18ac2e61d4bf},
+  {57594fa9362eafb685a0b98d0d315d77},
+  {ee6a5b525e101a9ca89c3fdf71c273b4},
+  {6474b5f6028a2672f7daa0ebbc4f25e5},
+  {2a282dd7bfd5f5d3af6443eda959365f},
+  {56f4dfd3205bf5d20ddec659e807299d},
+  {b1b8f8d3308b0817265d886bd179539f},
+  {d981ebf9b001695554390bc63698d980},
+  {02fb8792ce3fa37c9eae77f3da4fb214},
+  {985f05b7047185400eb816c9bab70dea},
+  {3dbee1dd0ceb0271d2a8c16f9a6d13eb},
+  {bf0217d7d0c680952880010c92e1f8f5},
+  {82aed73596f28e443cfcdfd29de147fe},
+  {6c485d21950101ca8d7795d8164e105a},
+  {c2f70143f4e51867509e57e8038e58db},
+  {c49c028d5f89b7be824d74147e3ea0bf},  % McCloskey
+  {419887051bd070b2eeea462a518c2b30},
+  {41625bdfaea67d6b02ac48f8bb490f79},  % Jones
+  {e4023b4a5a82067601f7c8dd12f310a6},  % Joy
+  {7acf19bd8aeb012fc74be237b85b7460},
+  {f8d7947fd0a9ce85620d563dd3c31f08},
+  {08371db12de3d4f12c28e8488153d9d5},
+  {1e1b366f8d1dceef88198e95cdafdc9e},
+  {32efc88d6e70c7961abf4c4865a07d0a}, % Horacsek
+  {1bbe04656bb1c41903b65b07eba6eb4d}, % Avino
+  {3ede2490c78888688b949542b1f5e9de}, % Liang
+  {a4e40a238d657b57a3f5bf42bbe7b0cd},
+  {1a8f8acf59c0598f11ff719930d9fcfc},
+  {b09b9fab0bc3ed13d1127f4ee47fa373}, % Nguyen
+  {aa117bd635e9e00409a4d7382165ac10},
+  {47d2af567c0991f774dbca2ceeb5f3ad},  % Karakas
+  {99267cac0b5772cffb175da996111b67},  % Murray
+  {c9eab8b188329e540eb9f0d8b4ef71f9},  % Ho
+  {51a27b83818bc0e55c863a09778bca2e},  % Garway Tammy Ng
+  {7a39c0b384f8c2af5f9496aac1743a0f}, 
+  {38260903eeaab55bb7ef00f18d6dc4fe},
+  {7fe6aefa754b26ef9176d32b16cc60b7},
+  {5c8b2a6dbc16179447a243a4539c6bfc},  % Renaud
+  {64b60fd7a04257c523a374f6f486959c},  % Palmer
+  {51c7c268eda5190445a6a91e2c167296},  % Olabode
+  {2303054ebfabce6923caaeba77b27558},
+  {715594b32ba9925272137e8e0ce2eb29},
+  {8345f1c458c49e8dfc22c9dfdcee99c8},
+  {bbc7182d3423213898647b82072d5bb3},  % Abu-Sardanah
+  {ddaa80301295e4adf6d52345c23d7d05},  % Dick
+  {108c042e56f1f75d075816ec062fce5e},
+  {5b58cc0f16e45f4f14dfb5d2d258b60d},  % Chato
+  {176b52261a047ef3cc263164b71f5d0b},
+  {a44496a8bdb42cf5e1756140b3ffb181},  % Roux-Cil
+  {12d2513dd714ea1f5e2166a279a53645},  % Gal Almog
+  {e0b56e36a0ed971cc0a84c3c75493816},  % Elisa Chao
+  {9f046e6e2789a0015f2158a77e627f76},  % Reid Vender
+  {ed01084c6e9d51409665133813ac9b07},  % Laura Munoz-Baena
+  {8c53133e7a7b0cbdda670e5ad307646c},
+  {55ac54217bcf565dcc3c14cfd5ec8e89},
+  {17426b559f1fdc1c596d3b6b4e2f7411},  % Kaitlyn Wade
+  {5b2e14210193e17b5cc5c5978712eb50},
+  {2a20694145ae96da1aaa252ff431a576},  % Emmanuel Wong
+  {2d71e42a73485481a3ac46805c5fd305},  % Gopi Gugan
+  {007140b764aa67078eea3dda938d4a6e},  % Molly Liu
+  {d2007f0498bff3f616229ab2fb0994d3},   % Bonnie Lu
+  {866a75c5374307615cbdc49f81925260},  % David Champredon
+  {602939b3632420f0f4e823d869f55158},  % Devan Becker
+  } 
+
+
+
+
+\name{Art\hspace{-0.5ex}}{\textbf{Poon}}
+%\title{Curriculum vitae}
+\address{Health Sciences Addition, H422}{London, ON}{Canada N6A 5C1}
+\phone[office]{(519) 661-2111 ext.~87978}
+\email{apoon42@uwo.ca}
+\social[github]{PoonLab}
+\social[twitter]{art\_poon}
+
+
+
+\begin{document}
+
+\makecvtitle
+
+\vspace{-3em}
+{\hfill\footnotesize Last updated: \today}
+
+\tableofcontents
+
+
+\section{Education}
+
+\cventry{2000--2005}{PhD}{University of California, San Diego}{La Jolla}{Biology}{Thesis: Evolutionary consequences of the genetic environment on mutations in bacterial viruses (Dr.~Lin Chao)}
+\cventry{1998--2000}{MSc}{University of British Columbia}{Vancouver}{Zoology}{Thesis:  The evolution of the genetic load caused by recurrent mutations in small populations: genetic context and demographic history (Dr.~Sarah P.~Otto)}
+\cventry{1994--1998}{HonBSc}{University of Toronto}{Toronto}{Biology}{Thesis: Estimates of mutational variance in \textit{Drosophila melanogaster} (Dr.~David Houle)}
+
+
+\section{Appointments}
+
+\cventry{July 2023--}{Full Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{Primary appointment, tenured.}
+
+\cventry{July 2019--June 2023}{Associate Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{Primary appointment, tenured.}
+
+\cventry{February 2020--present}{Cross-appointed faculty member}{Department of Computer Science}{Western University}{}{}
+
+\cventry{August 2016--July 2019}{Assistant Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{}
+
+\cventry{June 2017--present}{Cross-appointed faculty member}{Department of Microbiology and Immunology}{Western University}{}{}
+
+\cventry{November 2016--October 2021}{Cross-appointed faculty member}{Department of Applied Mathematics}{Western University}{}{}
+
+\cventry{March 2012--July 2016}{Assistant Professor (Partner), non-tenure track}{Department of Medicine}{University of British Columbia}{}{As an employee of Providence Health Care, I held this honorary unpaid appointment through the Partner Stream mechanism to provide teaching, scholarly and service activities at the university.}
+
+\cventry{October 2015--July 2016}{Senior Research Scientist}{}{BC Centre for Excellence in HIV/AIDS}{}{}
+
+\cventry{October 2009 -- October 2015}{Associate Research Scientist, Bioinformatics}{}{BC Centre for Excellence in HIV/AIDS}{}{}
+
+
+\section{Awards and Recognitions}
+
+\cventry{2019}{Dean's Award of Excellence}{Schulich School of Medicine \& Dentistry, Western University}{}{Junior Faculty (Basic Sciences).}{}
+
+\cventry{2013--2018}{CIHR New Investigator Award}{CIHR Priority Announcement: CHVI Vaccine Discovery and Social Research}{CAD\$300,000}{}{Project title: Applied phylogenetics for HIV prevention.}
+
+\cventry{2012-2020}{Career Investigator Scholar Award}{Michael Smith Foundation for Health Research, St.~Paul's Hospital Foundation, and the Providence Health Care Research Institute}{CAD\$ 317,500}{}{Project title: Phylogenetic surveillance of the HIV epidemic in British Columbia.  In 2016, I declined the remainder of this award when I left British Columbia to accept a tenure-track appointment at Western University in Ontario.}
+
+\cventry{2008-2010}{CIHR Fellowship}{CIHR Fellowships Award in the Area of Biomedical/Clinical HIV/AIDS Research}{CAD\$97,500}{}{}
+
+\cventry{1998-2000}{Postgraduate Scholarship Award}{Natural Sciences and Engineering Research Council of Canada (NSERC)}{CAD\$37,000}{}{}
+
+
+% load external .tex files
+\include{short-pubs}
+
+
+\include{src}
+
+
+\include{grants}
+
+
+\include{presentations}
+
+
+\include{supervision}
+
+
+\include{teaching}
+
+
+\include{service}
+
+
+\end{document}
+
+
+
+
