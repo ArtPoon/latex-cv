@@ -1,4 +1,4 @@
-% !TEX root = artpoon-CV.tex
+% !TEX root = tenpage.tex
 
 \section{Manuscripts in progress}
 
@@ -7,13 +7,27 @@
 %\bibliographystyleinprep{custom}
 %\bibliographyinprep{inprep}
 
-\defbibcheck{recent}{
-  \iffieldint{year}
-  {\ifnumless{\thefield{year}}{2020}
-    {\skipentry}
-    {}}
-  {\skipentry}
+
+% https://tex.stackexchange.com/questions/444095/printbibliography-by-variable-years
+\makeatletter
+\def\mblx@yearfrom{-1000}
+\def\mblx@yearto{3000}
+
+\newrobustcmd*{\setcheckfromtorange}[2]{%
+  \def\mblx@yearfrom{#1}%
+  \def\mblx@yearto{#2}%
 }
+
+\defbibcheck{fromto}{%
+  \iffieldint{year}
+  {\ifnumless{\thefield{year}}{\mblx@yearfrom}
+    {\skipentry}
+    {\ifnumgreater{\thefield{year}}{\mblx@yearto}
+    {\skipentry}
+    {}}}
+  {\skipentry}}
+\makeatother
+
 
 \begin{refsection}[inprep.bib]
 \nocite{*}
@@ -53,11 +67,12 @@ munoz2021clustering,
   Poon:2016a,
 }
 
-\printbibliography[heading=subbibliography, title=Original Research Articles, notkeyword=review, notkeyword=commentary, check=recent]
+\setcheckfromtorange{2020}{2025}
+\printbibliography[heading=subbibliography, title=Original Research Articles, notkeyword=review, notkeyword=commentary, check=fromto]
 
-\printbibliography[heading=subbibliography, title=Review Articles, keyword=review, check=recent]
+\printbibliography[heading=subbibliography, title=Review Articles, keyword=review, check=fromto]
 
-\printbibliography[heading=subbibliography, title=Commentaries, keyword=commentary, check=recent]
+\printbibliography[heading=subbibliography, title=Commentaries, keyword=commentary, check=fromto]
 \end{refsection}
 
 %\nocite{*}
