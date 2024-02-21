@@ -24,6 +24,10 @@
 \usepackage[scale=0.8, top=2cm, bottom=2.5cm]{geometry}
 
 
+\usepackage{tabularx}
+\usepackage[table]{xcolor} 
+
+
 \usepackage{enumitem}
 \setlist{nolistsep}
 
@@ -89,23 +93,23 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 %\usepackage[resetlabels,labeled]{multibib}
 %\newcites{inprep,nopeer,book,confpub}{{},{Non-peer reviewed},{Books}, {Conference publications}}
 
-\usepackage[backend=biber,bibencoding=utf8,style=numeric,maxbibnames=99,doi=false,sorting=ydnt,defernumbers=true]{biblatex}
+\usepackage[backend=biber, bibencoding=utf8, style=numeric, maxbibnames=10, doi=false, sorting=ydnt, defernumbers=true]{biblatex}
 
 
 % https://tex.stackexchange.com/questions/208821/dont-use-brackets-in-bibliography-1-instead-of-1
 \DeclareFieldFormat{labelnumberwidth}{#1\adddot\midsentence}
 
 % customize note field
-\DeclareFieldFormat{note}{\begin{small}\\\textcolor{violet}{#1}\end{small}}
+\DeclareFieldFormat{note}{}
 
 % https://tex.stackexchange.com/questions/247908/ordering-of-the-bibliography-with-biblatex-notes-at-the-end
-\AtEveryBibitem{%
-  \savefield{note}{\myadd}%
-  \clearfield{note}%
-  \newbibmacro{finentry}{
-    \restorefield{note}{\myadd}\printfield{note}
-    \finentry}%
-}
+%\AtEveryBibitem{%
+%  \savefield{note}{\myadd}%
+%  \clearfield{note}%
+%  \newbibmacro{finentry}{
+%    \restorefield{note}{\myadd}\printfield{note}
+%    \finentry}%
+%}
 
 
 % https://tex.stackexchange.com/questions/149743/highlighting-particular-bibliography-entries
@@ -252,23 +256,23 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \section{Appointments}
 
-\cventry{July 2023--}{Full Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{Primary appointment, tenured.}
+\cventry{2023--}{Full Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{Primary appointment, tenured.}
 
-\cventry{July 2019--June 2023}{Associate Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{Primary appointment, tenured.}
+\cventry{2019--2023}{Associate Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{Primary appointment, tenured.}
 
-\cventry{February 2020--present}{Cross-appointed faculty member}{Department of Computer Science}{Western University}{}{}
+%\cventry{2020--}{Cross-appointed faculty member}{Department of Computer Science}{Western University}{}{}
 
-\cventry{August 2016--July 2019}{Assistant Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{}
+\cventry{2016--2019}{Assistant Professor}{Department of Pathology and Laboratory Medicine}{Western University}{}{}
 
-\cventry{June 2017--present}{Cross-appointed faculty member}{Department of Microbiology and Immunology}{Western University}{}{}
+%\cventry{2017--}{Cross-appointed faculty member}{Department of Microbiology and Immunology}{Western University}{}{}
 
-\cventry{November 2016--October 2021}{Cross-appointed faculty member}{Department of Applied Mathematics}{Western University}{}{}
+%\cventry{2016--2021}{Cross-appointed faculty member}{Department of Applied Mathematics}{Western University}{}{}
 
-\cventry{March 2012--July 2016}{Assistant Professor (Partner), non-tenure track}{Department of Medicine}{University of British Columbia}{}{As an employee of Providence Health Care, I held this honorary unpaid appointment through the Partner Stream mechanism to provide teaching, scholarly and service activities at the university.}
+\cventry{2012--2016}{Assistant Professor (Partner), non-tenure track}{Department of Medicine}{University of British Columbia}{}{}
 
-\cventry{October 2015--July 2016}{Senior Research Scientist}{}{BC Centre for Excellence in HIV/AIDS}{}{}
+\cventry{2015--2016}{Senior Research Scientist}{}{BC Centre for Excellence in HIV/AIDS}{}{}
 
-\cventry{October 2009 -- October 2015}{Associate Research Scientist, Bioinformatics}{}{BC Centre for Excellence in HIV/AIDS}{}{}
+\cventry{2009--2015}{Associate Research Scientist, Bioinformatics}{}{BC Centre for Excellence in HIV/AIDS}{}{}
 
 
 \section{Awards and Recognitions}
@@ -279,31 +283,31 @@ leftmargin=\hintscolumnwidth+\separatorcolumnwidth+\labelwidth+\labelsep}
 
 \cventry{2012-2020}{Career Investigator Scholar Award}{Michael Smith Foundation for Health Research, St.~Paul's Hospital Foundation, and the Providence Health Care Research Institute}{CAD\$ 317,500}{}{Project title: Phylogenetic surveillance of the HIV epidemic in British Columbia.  In 2016, I declined the remainder of this award when I left British Columbia to accept a tenure-track appointment at Western University in Ontario.}
 
-\cventry{2008-2010}{CIHR Fellowship}{CIHR Fellowships Award in the Area of Biomedical/Clinical HIV/AIDS Research}{CAD\$97,500}{}{}
+%\cventry{2008-2010}{CIHR Fellowship}{CIHR Fellowships Award in the Area of Biomedical/Clinical HIV/AIDS Research}{CAD\$97,500}{}{}
 
-\cventry{1998-2000}{Postgraduate Scholarship Award}{Natural Sciences and Engineering Research Council of Canada (NSERC)}{CAD\$37,000}{}{}
+%\cventry{1998-2000}{Postgraduate Scholarship Award}{Natural Sciences and Engineering Research Council of Canada (NSERC)}{CAD\$37,000}{}{}
 
 
 % load external .tex files
-\include{short-pubs}
+\input{short-pubs}
 
 
-\include{src}
+%\include{src}
 
 
-\include{grants}
+\input{short-grants}
 
 
-\include{presentations}
+\input{short-presentations}
 
 
-\include{supervision}
+%\include{supervision}
 
 
-\include{teaching}
+\input{short-teaching}
 
 
-\include{service}
+%\include{service}
 
 
 \end{document}
